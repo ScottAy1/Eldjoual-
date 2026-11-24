@@ -10,25 +10,40 @@
     mapsUrl: "https://maps.app.goo.gl/LeVA8VaW7fEKT5jg8"
   };
 
-  // Replace these banner URLs with your own wide images.
+  // Swap the artwork and foreground product in each scene for your own photos.
   const HERO_SLIDES = [
     {
-      kicker: "L'élégance au quotidien",
-      title: "Galaxy A57 5G",
-      subtitle: "Un design affirmé, un écran immersif et toute la puissance Galaxy.",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=2400&q=85"
+      scene: "store",
+      kicker: "SPÉCIALISTE SAMSUNG GALAXY",
+      title: "KARIM PHONE",
+      subtitle: "EL HARRACH • ALGER",
+      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
+      loadLabel: "GALAXY // MODE ACTIF",
+      image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2400&q=85",
+      foreground: "assets/phones/samsung-a57.png",
+      foregroundAlt: "Samsung Galaxy A57 5G"
     },
     {
-      kicker: "Pensé pour aller plus loin",
-      title: "Galaxy S26 Ultra",
-      subtitle: "L'innovation Samsung dans un smartphone conçu pour les grandes idées.",
-      image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=2400&q=85"
+      scene: "repair",
+      kicker: "GALAXY EXPERT",
+      title: "RÉPARATIONS EXPRESS",
+      subtitle: "ÉCRANS, BATTERIES & DÉBLOCAGE",
+      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
+      loadLabel: "ATELIER // EN SERVICE",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2400&q=85",
+      foreground: "assets/phones/samsung-s26-ultra.png",
+      foregroundAlt: "Samsung Galaxy S26 Ultra"
     },
     {
-      kicker: "Un format qui change tout",
-      title: "Galaxy Z Flip6",
-      subtitle: "Compact quand vous le voulez. Grand quand vous en avez besoin.",
-      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=2400&q=85"
+      scene: "arrival",
+      kicker: "SAMSUNG ARRIVAGE",
+      title: "NOUVEAUTÉS GALAXY",
+      subtitle: "GALAXY A57 5G • S26 ULTRA • NEUF & CABAS",
+      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
+      loadLabel: "NOUVEAU STOCK // 2026",
+      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=2400&q=85",
+      foreground: "assets/phones/samsung-s25-fe.png",
+      foregroundAlt: "Samsung Galaxy S25 FE"
     }
   ];
 
@@ -150,6 +165,7 @@
 
   let heroIndex = 0;
   let heroTimer;
+  let heroTransitionTimer;
   let introTimer;
   let introTimeline;
   let promoTimer;
@@ -178,13 +194,21 @@
   // Hero slider with a timed progress line.
   function renderHero() {
     $("#heroSlides").innerHTML = HERO_SLIDES.map((slide, index) => `
-      <div class="hero-slide ${index === 0 ? "is-active" : ""}" role="img"
-        aria-label="${slide.title}" style="background-image:url('${slide.image}')"></div>
+      <article class="hero-slide hero-scene-${slide.scene} ${index === 0 ? "is-active" : ""}"
+        role="group" aria-roledescription="diapositive" aria-label="${slide.title}" aria-hidden="${index !== 0}">
+        <div class="hero-image-layer" style="background-image:url('${slide.image}')"></div>
+        <div class="hero-art-tone" aria-hidden="true"></div>
+        <div class="hero-character" aria-hidden="true">
+          <img src="${slide.foreground}" alt="" loading="${index === 0 ? "eager" : "lazy"}">
+        </div>
+      </article>
     `).join("");
 
-    $("#heroProgress").innerHTML = HERO_SLIDES.map((_, index) => `
+    $("#heroProgress").innerHTML = HERO_SLIDES.map((slide, index) => `
       <button class="progress-track ${index === 0 ? "is-active" : ""}" type="button"
-        data-slide="${index}" aria-label="Afficher le slide ${index + 1}" aria-current="${index === 0}">
+        data-slide="${index}" aria-label="Afficher ${slide.kicker}" aria-current="${index === 0}">
+        <span class="progress-number">0${index + 1}</span>
+        <span class="progress-name">${slide.scene === "store" ? "ELDJOUAL" : slide.scene === "repair" ? "ATELIER" : "GALAXY"}</span>
         <span class="progress-fill"></span>
       </button>
     `).join("");
@@ -196,16 +220,37 @@
   function showHero(index, animate = true) {
     heroIndex = (index + HERO_SLIDES.length) % HERO_SLIDES.length;
     const slide = HERO_SLIDES[heroIndex];
-    $$(".hero-slide").forEach((element, itemIndex) => element.classList.toggle("is-active", itemIndex === heroIndex));
+    $$(".hero-slide").forEach((element, itemIndex) => {
+      const active = itemIndex === heroIndex;
+      element.classList.toggle("is-active", active);
+      element.setAttribute("aria-hidden", String(!active));
+    });
     $("#heroKicker").textContent = slide.kicker;
     $("#heroTitle").textContent = slide.title;
     $("#heroSubtitle").textContent = slide.subtitle;
+    $("#heroMission").textContent = slide.mission;
+    $("#heroLoadLabel").textContent = slide.loadLabel;
+    $("#heroLoadStep").textContent = `0${heroIndex + 1} / 0${HERO_SLIDES.length}`;
     $("#heroCurrent").textContent = String(heroIndex + 1).padStart(2, "0");
 
     $$(".progress-track").forEach((button, itemIndex) => {
       button.classList.toggle("is-active", itemIndex === heroIndex);
       button.setAttribute("aria-current", String(itemIndex === heroIndex));
     });
+
+    const loader = $("#heroLoaderFill");
+    loader.classList.remove("is-running");
+    void loader.offsetWidth;
+    if (!reducedMotion) loader.classList.add("is-running");
+
+    if (animate) {
+      const stage = $("#accueil");
+      window.clearTimeout(heroTransitionTimer);
+      stage.classList.remove("is-transitioning");
+      void stage.offsetWidth;
+      stage.classList.add("is-transitioning");
+      heroTransitionTimer = window.setTimeout(() => stage.classList.remove("is-transitioning"), 850);
+    }
 
     if (animate && hasGsap && !reducedMotion) {
       window.gsap.fromTo(".hero-copy > *",
@@ -217,8 +262,38 @@
 
   function startHeroTimer() {
     window.clearInterval(heroTimer);
-    heroTimer = window.setInterval(() => showHero(heroIndex + 1), 6500);
+    if (reducedMotion) return;
+    heroTimer = window.setInterval(() => showHero(heroIndex + 1), 5500);
   }
+
+  const heroStage = $("#accueil");
+  let swipeStart = null;
+  heroStage.addEventListener("pointermove", event => {
+    if (event.pointerType !== "mouse" || reducedMotion) return;
+    const bounds = heroStage.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    heroStage.style.setProperty("--hero-parallax-x", `${x * 16}px`);
+    heroStage.style.setProperty("--hero-parallax-y", `${y * 12}px`);
+  });
+  heroStage.addEventListener("pointerleave", () => {
+    heroStage.style.setProperty("--hero-parallax-x", "0px");
+    heroStage.style.setProperty("--hero-parallax-y", "0px");
+  });
+  heroStage.addEventListener("touchstart", event => {
+    const touch = event.changedTouches[0];
+    swipeStart = { x: touch.clientX, y: touch.clientY };
+  }, { passive: true });
+  heroStage.addEventListener("touchend", event => {
+    if (!swipeStart) return;
+    const touch = event.changedTouches[0];
+    const dx = touch.clientX - swipeStart.x;
+    const dy = touch.clientY - swipeStart.y;
+    swipeStart = null;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+    showHero(heroIndex + (dx < 0 ? 1 : -1));
+    startHeroTimer();
+  }, { passive: true });
 
   $("#heroPrev").addEventListener("click", () => {
     showHero(heroIndex - 1);

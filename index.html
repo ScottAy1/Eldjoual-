@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Découvrez les Samsung Galaxy chez Eldjoual : sélection, conseils et commande WhatsApp à El Harrach, Alger.">
+  <meta name="theme-color" content="#000000">
+  <title>Eldjoual — L'expérience Galaxy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { galaxy: "#0381FE", galaxyDeep: "#1428A0" },
+          fontFamily: { sans: ["Inter", "sans-serif"], display: ["Outfit", "sans-serif"] }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Intro: shown once per session, or replayed from the footer. -->
+  <div id="introCurtain" class="intro-curtain" aria-hidden="true">
+    <div class="intro-glow"></div>
+    <div class="intro-streak"></div>
+    <div class="intro-copy">
+      <div class="intro-logo-mask">
+        <div id="tv-logo-wrap">
+          <img
+            id="tv-logo"
+            class="tv-logo-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png"
+            alt="Samsung">
+        </div>
+      </div>
+      <p id="tv-sub">Eldjoual <span>• El Harrach</span></p>
+    </div>
+    <span class="intro-caption">Samsung Galaxy • Algérie</span>
+    <button id="skipIntro" class="intro-skip" type="button">Passer l'intro</button>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Navigation principale">
+      <a class="brand-mark" href="#accueil" aria-label="Eldjoual, accueil">Eldjoual<span>.</span></a>
+      <div class="nav-links">
+        <a href="#catalogue">Catalogue</a>
+        <button id="openPromo" type="button">Sélection Samsung</button>
+        <a href="#contact">Contact</a>
+      </div>
+      <a id="navWhatsApp" class="button button-whatsapp nav-cta" href="#" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero-stage" aria-label="Sélection Samsung Galaxy">
+      <div id="heroSlides" class="hero-slides"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-copy">
+        <span class="eyebrow hero-eyebrow">Eldjoual présente</span>
+        <p id="heroKicker" class="hero-kicker"></p>
+        <h1 id="heroTitle" class="hero-title"></h1>
+        <p id="heroSubtitle" class="hero-subtitle"></p>
+        <a href="#catalogue" class="button button-light">Découvrir la collection <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom">
+        <span class="hero-index"><span id="heroCurrent">01</span> <i></i> 03</span>
+        <div id="heroProgress" class="hero-progress" aria-label="Choisir une présentation"></div>
+        <div class="hero-controls">
+          <button id="heroPrev" type="button" aria-label="Présentation précédente">←</button>
+          <button id="heroNext" type="button" aria-label="Présentation suivante">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogue" class="catalogue-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sélection Eldjoual</p>
+        <h2>Un Galaxy pour chaque idée.</h2>
+        <p>Explorez les appareils, comparez les essentiels et trouvez celui qui vous ressemble.</p>
+      </div>
+      <div id="phoneShowcase" class="phone-showcase"></div>
+    </section>
+
+    <section class="service-band" aria-label="Services Eldjoual">
+      <span>Conseils personnalisés</span><i></i>
+      <span>Commande simple sur WhatsApp</span><i></i>
+      <span>Livraison en Algérie</span>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contactTitle">
+      <div class="contact-heading">
+        <div>
+          <p class="eyebrow">Boutique &amp; Atelier</p>
+          <h2 id="contactTitle">Passez nous voir chez Eldjoual</h2>
+        </div>
+        <span id="storeStatus" class="store-status" role="status" aria-live="polite">
+          <i aria-hidden="true"></i><span>Vérification des horaires…</span>
+        </span>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <article class="contact-card">
+            <p class="contact-card-label">Adresse</p>
+            <address>El Harrach 16004,<br>Alger, Algérie</address>
+            <a id="storeDirections" class="contact-text-link" href="https://maps.app.goo.gl/LeVA8VaW7fEKT5jg8" target="_blank" rel="noopener noreferrer">
+              Ouvrir l’itinéraire GPS <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-card-label">Appelez-nous</p>
+            <div class="contact-phone-row">
+              <a class="contact-phone" href="tel:+213560955921">0560 95 59 21</a>
+              <button id="copyPhone" class="copy-phone" type="button" aria-live="polite">Copier</button>
+            </div>
+            <p class="contact-card-note">Téléphone &amp; WhatsApp</p>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-card-label">Horaires d’ouverture</p>
+            <dl class="opening-hours">
+              <div><dt>Samedi – Jeudi</dt><dd>09h00 – 22h00</dd></div>
+              <div><dt>Vendredi</dt><dd>15h00 – 22h00</dd></div>
+            </dl>
+          </article>
+
+          <a id="contactWhatsapp" class="button contact-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+            Discuter sur WhatsApp maintenant <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            class="contact-map-frame"
+            title="Emplacement d’Eldjoual à El Harrach"
+            src="https://www.google.com/maps?q=Eldjoual+El+Harrach+16004&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+          <div class="map-overlay">
+            <div class="map-overlay-heading">
+              <div>
+                <p class="map-store-name">Eldjoual</p>
+                <p class="map-store-address">El Harrach 16004, Alger</p>
+              </div>
+              <span class="google-rating" aria-label="Note Google : 5.0 sur 5">★ 5.0 <span>Google</span></span>
+            </div>
+            <a id="mapDirections" class="map-directions" href="https://maps.app.goo.gl/LeVA8VaW7fEKT5jg8" target="_blank" rel="noopener noreferrer">
+              Y aller avec Google Maps <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Studio modal for product angles and specifications. -->
+  <div id="detailModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-hidden="true">
+    <div class="studio-panel">
+      <button id="closeDetail" class="modal-close" type="button" aria-label="Fermer les détails">×</button>
+      <div class="studio-gallery">
+        <div id="studioViewer" class="studio-viewer">
+          <div class="studio-glow"></div>
+          <button id="anglePrev" class="viewer-arrow viewer-prev" type="button" aria-label="Angle précédent">←</button>
+          <img id="detailImage" class="studio-image" src="" alt="">
+          <button id="angleNext" class="viewer-arrow viewer-next" type="button" aria-label="Angle suivant">→</button>
+          <span id="angleLabel" class="angle-label"></span>
+        </div>
+        <div id="angleTabs" class="angle-tabs" aria-label="Angles du produit"></div>
+        <p class="gallery-hint">Survolez l'image pour l'agrandir · utilisez ← → pour changer d'angle</p>
+      </div>
+      <div class="studio-details">
+        <p id="detailBadge" class="model-badge"></p>
+        <h2 id="detailTitle" class="studio-title"></h2>
+        <p id="detailCondition" class="condition-label"></p>
+        <dl id="detailSpecs" class="spec-table"></dl>
+        <div class="studio-order">
+          <p id="detailPrice" class="price"></p>
+          <a id="detailWhatsApp" class="button button-whatsapp" href="#" target="_blank" rel="noopener">Commander sur WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Samsung spotlight, opened from navigation or after the intro. -->
+  <div id="promoModal" class="modal-layer promo-layer" role="dialog" aria-modal="true" aria-labelledby="promoTitle" aria-hidden="true">
+    <div class="promo-panel">
+      <button id="closePromo" class="modal-close" type="button" aria-label="Fermer la sélection">×</button>
+      <p class="eyebrow">À la une chez Eldjoual</p>
+      <h2 id="promoTitle" class="promo-title">La sélection Galaxy.</h2>
+      <div id="promoPhones" class="promo-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div>
+        <a class="brand-mark footer-brand" href="#accueil">Eldjoual<span>.</span></a>
+        <p class="footer-tagline">L'expérience Galaxy, à El Harrach.</p>
+        <p class="logo-attribution">
+          Logo Samsung : <a href="https://commons.wikimedia.org/wiki/File:Samsung_Orig_Wordmark_BLACK_RGB.png" target="_blank" rel="noopener noreferrer">Samsung, via Wikimedia Commons</a> ·
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (couleurs adaptées).
+        </p>
+      </div>
+      <div class="footer-contact">
+        <p class="eyebrow">Explorer</p>
+        <a href="#catalogue">Catalogue</a>
+        <a id="footerMaps" href="https://maps.app.goo.gl/LeVA8VaW7fEKT5jg8" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>
+        <a href="#" id="footerWhatsapp" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Eldjoual</span>
+      <button id="replayIntro" type="button">Revoir l'intro <span aria-hidden="true">↗</span></button>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

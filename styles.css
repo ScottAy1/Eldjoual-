@@ -851,3 +851,190 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* EL DJOUAL DISTRIBUTION light-mode system */
+:root {
+  color-scheme: light;
+  --black: #fff;
+  --carbon: #f5f6f8;
+  --surface: #fff;
+  --white: #17191d;
+  --blue: #0381fe;
+  --blue-deep: #1428a0;
+  --muted: #6b7079;
+  --hairline: #e2e5e9;
+}
+
+html, body { background: #fff; color: #17191d; }
+body { font-family: "Inter", sans-serif; }
+h1, h2, h3 { font-family: "Outfit", "Inter", sans-serif; }
+button, a { color: inherit; }
+
+.brand-mark { display: inline-flex; align-items: baseline; gap: .08em; color: #17191d; font-size: 1.05rem; letter-spacing: -.055em; }
+.brand-mark small { margin-left: .35rem; color: #6b7079; font-family: "Inter", sans-serif; font-size: .55rem; font-weight: 700; letter-spacing: .12em; }
+.nav-pill {
+  min-height: 66px;
+  padding: .5rem 1rem  .5rem 1.2rem;
+  border: 1px solid #e2e5e9;
+  border-radius: 0;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 8px 26px rgb(23 25 29 / 8%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.nav-links { color: #555b65; }
+.nav-links a:hover, .nav-links button:hover { color: var(--blue-deep); }
+.nav-social-link {
+  width: 34px;
+  height: 34px;
+  border-color: #e2e5e9;
+  border-radius: 0;
+  background: #fff;
+  color: #333943;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.nav-social-link:hover { background: #f5f6f8; color: var(--blue-deep); }
+.nav-social-divider { background: #e2e5e9; }
+.social-letter { position: relative; z-index: 1; font-size: .78rem; font-weight: 800; }
+.nav-cta.button-whatsapp { border-radius: 0; background: var(--blue); box-shadow: none; color: #fff; }
+.button { border-radius: 0; }
+.button-whatsapp { background: var(--blue); color: #fff; }
+.button-whatsapp:hover { background: var(--blue-deep); }
+
+/* Keep the full-screen loading-screen mood while using Samsung blue accents. */
+.hero-stage { height: 100vh; height: 100svh; min-height: 620px; background: #071229; }
+.hero-image-layer::after {
+  background: linear-gradient(90deg, rgb(5 12 28 / 86%) 0%, rgb(5 12 28 / 60%) 48%, rgb(5 12 28 / 12%) 100%),
+    linear-gradient(0deg, rgb(5 12 28 / 70%), transparent 62%);
+}
+.hero-art-tone { mix-blend-mode: screen; opacity: .2 !important; }
+.hero-vignette {
+  background: linear-gradient(0deg, #071229 0%, rgb(7 18 41 / 52%) 14%, transparent 52%),
+    linear-gradient(90deg, transparent 62%, rgb(3 129 254 / 10%));
+}
+.hero-ink-overlay { opacity: .12; }
+.hero-eyebrow { border-radius: 0; background: var(--blue); box-shadow: none; }
+.hero-title { font-family: "Outfit", "Inter", sans-serif; font-size: clamp(4.5rem, 10vw, 8rem); line-height: .9; text-shadow: none; -webkit-text-stroke: 0; }
+.hero-subtitle { max-width: 610px; color: #edf4ff; text-shadow: none; line-height: 1.7; }
+.hero-cta { border: 1px solid var(--blue); border-radius: 0; background: var(--blue); box-shadow: none; font-family: "Inter", sans-serif; }
+.hero-cta:hover { background: var(--blue-deep); }
+.hero-mission-card {
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-left: 3px solid var(--blue);
+  border-radius: 0;
+  background: rgb(7 18 41 / 76%);
+  box-shadow: none;
+  transform: none;
+}
+.hero-controls button { border-radius: 0; background: rgb(7 18 41 / 60%); }
+
+.catalogue-section { background: #fff; color: #17191d; }
+.section-heading h2, .contact-heading h2 { font-weight: 700; letter-spacing: -.045em; }
+.phone-showcase { gap: 5rem; }
+.phone-section { min-height: 520px; }
+.phone-stage {
+  min-height: 500px;
+  border-radius: 0;
+  background: #f5f6f8;
+}
+.phone-stage::before, .phone-ambient { background: rgb(3 129 254 / 9%); }
+.phone-product-image { filter: drop-shadow(0 24px 28px rgb(23 25 29 / 12%)); }
+.image-placeholder-note { position: absolute; right: 1rem; bottom: 1rem; z-index: 3; color: #777e88; font-size: .62rem; letter-spacing: .06em; pointer-events: none; text-transform: uppercase; }
+.model-badge { color: #555b65; }
+.model-badge::before { border-radius: 0; }
+.phone-title-button { font-family: "Outfit", "Inter", sans-serif; }
+.phone-summary { color: #656b74; }
+.spec-summary div { border-color: #e2e5e9; }
+.spec-summary dt { color: #727882; }
+.spec-summary dd { color: #17191d; }
+.phone-price { color: #17191d; }
+.button-dark { background: #1428a0; color: #fff; }
+.button-dark:hover { background: #0381fe; }
+.button-outline { border-color: #cbd0d7; color: #17191d; }
+.button-outline:hover { border-color: var(--blue); background: #f5f9ff; }
+
+.service-band {
+  border-top: 1px solid #e2e5e9;
+  border-bottom: 1px solid #e2e5e9;
+  background: #f5f6f8;
+  color: #343a44;
+}
+.service-band i { border-radius: 0; }
+.contact-section { background: #fff; color: #17191d; }
+.contact-section::before { display: none; }
+.contact-panel { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
+.contact-heading { align-items: flex-start; }
+.contact-heading h2 { max-width: 700px; }
+.store-status { padding: .65rem 0; border: 0; border-radius: 0; background: transparent; color: #555b65; }
+.store-status i { border-radius: 0; background: var(--blue); box-shadow: none; }
+.contact-layout { grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr); }
+.contact-card { border-color: #e2e5e9; }
+.contact-card-label { color: #6b7079; }
+.contact-card address, .contact-phone, .contact-phone-row .contact-phone { color: #17191d; }
+.contact-email { display: block; width: fit-content; margin-top: .55rem; color: #1428a0; font-size: .82rem; font-weight: 600; }
+.contact-email:hover, .contact-text-link:hover { color: var(--blue); }
+.contact-text-link { color: #1428a0; }
+.copy-phone { border-color: #d7dbe1; border-radius: 0; background: #f5f6f8; color: #343a44; }
+.contact-whatsapp { border-radius: 0; box-shadow: none; }
+.contact-map { min-height: 480px; border: 1px solid #e2e5e9; border-radius: 0; background: #f5f6f8; }
+.contact-map-frame { filter: none; }
+.map-overlay { right: 0; bottom: 0; left: 0; padding: 1rem 1.2rem; background: rgb(255 255 255 / 96%); }
+.map-store-name { color: #17191d; }
+.map-store-address { color: #6b7079; }
+.google-rating, .google-rating span { color: #555b65; }
+.map-directions { border: 1px solid #e2e5e9; border-radius: 0; background: #fff; color: #1428a0; }
+.map-directions:hover { background: #f5f9ff; }
+
+.modal-layer { background: rgb(15 23 42 / 42%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.studio-panel, .promo-panel {
+  border: 1px solid #e2e5e9;
+  border-radius: 0;
+  background: #fff;
+  color: #17191d;
+  box-shadow: 0 30px 90px rgb(23 25 29 / 18%);
+}
+.modal-close { border: 1px solid #dfe3e8; border-radius: 0; background: #fff; color: #17191d; }
+.modal-close:hover { background: #f5f6f8; }
+.studio-viewer { border: 1px solid #e2e5e9; border-radius: 0; background: #f5f6f8; }
+.studio-glow { background: rgb(3 129 254 / 10%); }
+.studio-image { filter: drop-shadow(0 24px 28px rgb(23 25 29 / 13%)); }
+.viewer-arrow { border-color: #dfe3e8; border-radius: 0; background: #fff; color: #17191d; }
+.angle-label { color: #555b65; }
+.angle-tab { border-color: #dfe3e8; border-radius: 0; color: #555b65; }
+.angle-tab:hover, .angle-tab.is-active { border-color: var(--blue); background: #edf5ff; color: #1428a0; }
+.gallery-hint, .condition-label { color: #6b7079; }
+.studio-details .model-badge { color: #555b65; }
+.spec-table, .spec-row { border-color: #e2e5e9; }
+.spec-row dt { color: #6b7079; }
+.spec-row dd { color: #17191d; }
+.promo-card { padding: 1rem; border: 1px solid #e2e5e9; border-radius: 0; background: #fff; }
+.promo-image-wrap { border-radius: 0; background: #f5f6f8; }
+.promo-card p { color: #656b74; }
+.promo-card .price { color: #17191d; }
+
+.site-footer { border-color: #e2e5e9; background: #f5f6f8; color: #17191d; }
+.footer-tagline, .logo-attribution { color: #6b7079; }
+.logo-attribution a { color: #1428a0; }
+.logo-attribution a:hover { color: var(--blue); }
+.footer-contact > a { color: #343a44; }
+.footer-contact > a:hover { color: var(--blue-deep); }
+.footer-socials .footer-social-link { border-color: #dfe3e8; border-radius: 999px; background: #fff; color: #343a44; }
+.footer-social-link:hover { background: #edf5ff; color: #1428a0; }
+.footer-social-link .social-letter { color: var(--blue-deep); font-size: .75rem; }
+.footer-social-arrow { color: #6b7079; }
+.footer-bottom { border-color: #dfe3e8; color: #6b7079; }
+.footer-bottom button { color: #343a44; }
+.footer-bottom button:hover { color: var(--blue-deep); }
+
+@media (max-width: 760px) {
+  .nav-pill { min-height: 56px; padding-left: .8rem; }
+  .brand-mark { font-size: .95rem; }
+  .brand-mark small { font-size: .48rem; }
+  .nav-socials, .nav-social-divider { display: none; }
+  .hero-title { font-size: clamp(3.8rem, 15vw, 6.2rem); }
+  .hero-subtitle { max-width: 94%; }
+  .hero-stage { min-height: 680px; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-map { min-height: 400px; }
+}

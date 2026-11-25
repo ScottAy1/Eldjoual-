@@ -4,105 +4,59 @@
 // ==========================================================
 (() => {
   const STORE = {
-    name: "Eldjoual",
-    whatsapp: "213560955921",
-    phoneDisplay: "0560 95 59 21",
-    mapsUrl: "https://maps.app.goo.gl/LeVA8VaW7fEKT5jg8"
+    name: "EL DJOUAL DISTRIBUTION",
+    whatsapp: "213563516895",
+    commercialWhatsapp: "213552856155",
+    phoneDisplay: "0563 51 68 95",
+    mapsUrl: "https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac"
   };
 
   // Swap the artwork and foreground product in each scene for your own photos.
   const HERO_SLIDES = [
     {
       scene: "store",
-      kicker: "SPÉCIALISTE SAMSUNG GALAXY",
-      title: "KARIM PHONE",
-      subtitle: "EL HARRACH • ALGER",
-      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
-      loadLabel: "GALAXY // MODE ACTIF",
+      kicker: "DISTRIBUTEUR SAMSUNG ALGÉRIE",
+      title: "EL DJOUAL",
+      subtitle: "DISTRIBUTEUR SAMSUNG ALGÉRIE • GARANTIE 12 MOIS • LIVRAISON 58 WILAYAS",
+      mission: "DISTRIBUTION NATIONALE • GARANTIE 12 MOIS • DEVIS SUR WHATSAPP ↗",
+      loadLabel: "RÉSEAU NATIONAL // 58 WILAYAS",
       image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2400&q=85",
-      foreground: "assets/phones/samsung-a57.png",
-      foregroundAlt: "Samsung Galaxy A57 5G"
+      foreground: "assets/phones/samsung-a37.png",
+      foregroundAlt: "Samsung Galaxy — visuel de présentation"
     },
     {
       scene: "repair",
-      kicker: "GALAXY EXPERT",
-      title: "RÉPARATIONS EXPRESS",
-      subtitle: "ÉCRANS, BATTERIES & DÉBLOCAGE",
-      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
-      loadLabel: "ATELIER // EN SERVICE",
+      kicker: "GARANTIE OFFICIELLE",
+      title: "12 MOIS",
+      subtitle: "UN SERVICE COMMERCIAL À VOTRE ÉCOUTE",
+      mission: "SERVICE COMMERCIAL • 0552 85 61 55 • COMMERCIAL@ELDJOUAL.COM",
+      loadLabel: "GARANTIE // 12 MOIS",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2400&q=85",
-      foreground: "assets/phones/samsung-s26-ultra.png",
-      foregroundAlt: "Samsung Galaxy S26 Ultra"
+      foreground: "assets/phones/samsung-s25-fe.png",
+      foregroundAlt: "Samsung Galaxy — visuel de présentation"
     },
     {
       scene: "arrival",
-      kicker: "SAMSUNG ARRIVAGE",
-      title: "NOUVEAUTÉS GALAXY",
-      subtitle: "GALAXY A57 5G • S26 ULTRA • NEUF & CABAS",
-      mission: "OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗",
-      loadLabel: "NOUVEAU STOCK // 2026",
+      kicker: "DISTRIBUTION NATIONALE",
+      title: "58 WILAYAS",
+      subtitle: "SAMSUNG GALAXY • DISPONIBILITÉ SUR DEVIS",
+      mission: "LIVRAISON NATIONALE • CONTACTEZ NOTRE ÉQUIPE COMMERCIALE ↗",
+      loadLabel: "LIVRAISON // ALGÉRIE",
       image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=2400&q=85",
-      foreground: "assets/phones/samsung-s25-fe.png",
-      foregroundAlt: "Samsung Galaxy S25 FE"
+      foreground: "assets/phones/samsung-z-flip6.jpg",
+      foregroundAlt: "Samsung Galaxy — visuel de présentation"
     }
   ];
 
-  // Angle photos are easy to replace individually with real product views.
+  // Temporary angle-image placeholders can be replaced with official product photos.
   const PHONES = [
     {
-      id: "a57",
-      model: "Samsung Galaxy A57 5G",
-      badge: "NOUVEAU · GALAXY A57 5G",
-      condition: "Neuf Scellé",
-      price: "89 900 DA",
-      summary: "L'essentiel du Galaxy, sublimé par un design fin et une expérience fluide.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-a57.png" },
-        { label: "Dos", url: "assets/phones/samsung-a57.png" },
-        { label: "Profil", url: "assets/phones/samsung-a57.png" },
-        { label: "Détail", url: "assets/phones/samsung-a57.png" }
-      ],
-      specs: {
-        screen: "Super AMOLED+ 120 Hz",
-        chip: "Exynos 1680",
-        camera: "50 MP avec stabilisation optique",
-        battery: "5 000 mAh · charge rapide 45 W",
-        storage: "256 Go",
-        network: "5G",
-        condition: "Neuf Scellé"
-      }
-    },
-    {
-      id: "s26-ultra",
-      model: "Samsung Galaxy S26 Ultra",
-      badge: "GALAXY S · ULTRA",
-      condition: "Neuf Scellé",
-      price: "289 000 DA",
-      summary: "Une expérience haut de gamme pensée pour la création, la productivité et Galaxy AI.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-s26-ultra.png" },
-        { label: "Dos", url: "assets/phones/samsung-s26-ultra.png" },
-        { label: "Profil", url: "assets/phones/samsung-s26-ultra.png" },
-        { label: "Détail", url: "assets/phones/samsung-s26-ultra.png" }
-      ],
-      specs: {
-        screen: "Dynamic AMOLED 2X QHD+",
-        chip: "Snapdragon 8 Elite",
-        camera: "Capteur principal 200 MP",
-        battery: "5 000 mAh",
-        storage: "256 Go · 512 Go · 1 To",
-        network: "5G",
-        condition: "Neuf Scellé",
-        feature: "S Pen intégré · Galaxy AI"
-      }
-    },
-    {
-      id: "a37",
-      model: "Samsung Galaxy A37 5G",
-      badge: "GALAXY A · ESSENTIEL",
-      condition: "Neuf Scellé",
-      price: "62 900 DA",
-      summary: "Un compagnon fiable au quotidien, avec un bel écran et une autonomie généreuse.",
+      id: "a26-5g",
+      model: "Samsung Galaxy A26 5G",
+      badge: "GARANTIE 12 MOIS · GALAXY A26 5G",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Un écran Super AMOLED fluide, la 5G et un appareil photo stabilisé pour le quotidien.",
       angles: [
         { label: "Face", url: "assets/phones/samsung-a37.png" },
         { label: "Dos", url: "assets/phones/samsung-a37.png" },
@@ -110,42 +64,70 @@
         { label: "Détail", url: "assets/phones/samsung-a37.png" }
       ],
       specs: {
-        screen: "Super AMOLED 120 Hz",
-        chip: "Exynos 1480",
-        camera: "50 MP + ultra grand-angle",
-        battery: "5 000 mAh · charge rapide 45 W",
-        storage: "128 Go · 256 Go",
+        screen: '6,7" FHD+ Super AMOLED · 120 Hz',
+        chip: "Exynos 1380",
+        camera: "50 MP OIS + 8 MP ultra grand-angle + 2 MP macro",
+        battery: "5 000 mAh · charge 25 W",
+        storage: "128 Go ou 256 Go · microSD",
         network: "5G",
-        condition: "Neuf Scellé"
+        protection: "IP67",
+        updates: "Jusqu’à 6 générations Android",
+        warranty: "Garantie 12 mois"
       }
     },
     {
-      id: "z-flip6",
-      model: "Samsung Galaxy Z Flip6",
-      badge: "GALAXY Z · FOLDABLE",
-      condition: "Cabas",
-      price: "159 000 DA",
-      summary: "Le format pliable Galaxy, compact et expressif, prêt à vous suivre partout.",
+      id: "a17",
+      model: "Samsung Galaxy A17",
+      badge: "GARANTIE 12 MOIS · GALAXY A17",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Un grand écran Super AMOLED, une batterie longue durée et l’essentiel Galaxy.",
       angles: [
-        { label: "Face", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Dos", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Profil", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Détail", url: "assets/phones/samsung-z-flip6.jpg" }
+        { label: "Face", url: "assets/phones/samsung-a57.png" },
+        { label: "Dos", url: "assets/phones/samsung-a57.png" },
+        { label: "Profil", url: "assets/phones/samsung-a57.png" },
+        { label: "Détail", url: "assets/phones/samsung-a57.png" }
       ],
       specs: {
-        screen: "Dynamic AMOLED 2X pliable",
-        chip: "Snapdragon 8 Gen 3 for Galaxy",
-        camera: "50 MP · FlexCam",
-        battery: "4 000 mAh",
-        storage: "256 Go · 512 Go",
-        network: "5G",
-        condition: "Cabas",
-        feature: "Galaxy AI · FlexWindow"
+        screen: '6,7" FHD+ Super AMOLED · 90 Hz',
+        chip: "MediaTek Helio G99 (version 4G)",
+        camera: "50 MP + 5 MP ultra grand-angle + 2 MP macro",
+        battery: "5 000 mAh · charge 25 W",
+        storage: "128 Go ou 256 Go · microSD",
+        network: "4G LTE",
+        protection: "IP54",
+        updates: "Jusqu’à 6 générations Android",
+        warranty: "Garantie 12 mois"
+      }
+    },
+    {
+      id: "a07",
+      model: "Samsung Galaxy A07",
+      badge: "GARANTIE 12 MOIS · GALAXY A07",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Un Galaxy accessible avec un grand écran 90 Hz et une autonomie de 5 000 mAh.",
+      angles: [
+        { label: "Face", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Dos", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Profil", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Détail", url: "assets/phones/samsung-s25-fe.png" }
+      ],
+      specs: {
+        screen: '6,7" HD+ PLS LCD · 90 Hz',
+        chip: "MediaTek Helio G99",
+        camera: "50 MP + 2 MP profondeur",
+        battery: "5 000 mAh · charge 25 W",
+        storage: "64 Go ou 128 Go · microSD",
+        network: "4G LTE",
+        protection: "IP54",
+        updates: "Jusqu’à 6 générations Android",
+        warranty: "Garantie 12 mois"
       }
     }
   ];
 
-  const PROMO_PHONES = [PHONES[0], PHONES[1], PHONES[3]];
+  const PROMO_PHONES = PHONES;
   const SPEC_LABELS = {
     screen: "Écran",
     chip: "Puce",
@@ -154,11 +136,14 @@
     storage: "Stockage",
     network: "Réseau",
     condition: "État",
-    feature: "Fonctions"
+    feature: "Fonctions",
+    protection: "Protection",
+    updates: "Mises à jour",
+    warranty: "Garantie"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-  const waLink = message => `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(message)}`;
+  const waLink = (message, number = STORE.whatsapp) => `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasGsap = Boolean(window.gsap && window.ScrollTrigger);
   if (hasGsap) window.gsap.registerPlugin(window.ScrollTrigger);
@@ -168,7 +153,6 @@
   let heroTransitionTimer;
   let introTimer;
   let introTimeline;
-  let promoTimer;
   let lenis;
   let currentPhoneIndex = 0;
   let currentAngleIndex = 0;
@@ -208,7 +192,7 @@
       <button class="progress-track ${index === 0 ? "is-active" : ""}" type="button"
         data-slide="${index}" aria-label="Afficher ${slide.kicker}" aria-current="${index === 0}">
         <span class="progress-number">0${index + 1}</span>
-        <span class="progress-name">${slide.scene === "store" ? "ELDJOUAL" : slide.scene === "repair" ? "ATELIER" : "GALAXY"}</span>
+        <span class="progress-name">${slide.scene === "store" ? "DISTRIBUTEUR" : slide.scene === "repair" ? "GARANTIE" : "58 WILAYAS"}</span>
         <span class="progress-fill"></span>
       </button>
     `).join("");
@@ -320,6 +304,7 @@
             <div class="phone-ambient"></div>
             <img class="phone-product-image" src="${phone.angles[0].url}" alt="${phone.model}" loading="lazy">
             <button class="phone-image-trigger" type="button" data-open-phone="${index}" aria-label="Explorer ${phone.model}"></button>
+            <span class="image-placeholder-note">Visuel provisoire</span>
           </div>
           <div class="phone-copy">
             <p class="model-badge">${phone.badge}</p>
@@ -333,7 +318,7 @@
             <div class="phone-purchase">
               <p class="phone-price">${phone.price}</p>
               <button class="button button-dark" type="button" data-open-phone="${index}">Explorer l'appareil <span aria-hidden="true">↗</span></button>
-              <a class="button button-outline" href="${waLink(`Bonjour ${STORE.name}, je souhaite commander le ${phone.model}.`)}" target="_blank" rel="noopener">Commander <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis et commander le ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">Demander un devis / Commander sur WhatsApp <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -403,7 +388,7 @@
     $("#detailSpecs").innerHTML = Object.entries(phone.specs).map(([key, value]) => `
       <div class="spec-row"><dt>${SPEC_LABELS[key] || key}</dt><dd>${value}</dd></div>
     `).join("");
-    $("#detailWhatsApp").href = waLink(`Bonjour ${STORE.name}, je souhaite commander le ${phone.model}.`);
+    $("#detailWhatsApp").href = waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour le ${phone.model}.`, STORE.commercialWhatsapp);
     $("#angleTabs").innerHTML = phone.angles.map((angle, angleIndex) => `
       <button class="angle-tab ${angleIndex === 0 ? "is-active" : ""}" type="button"
         data-angle="${angleIndex}" aria-pressed="${angleIndex === 0}">${angle.label}</button>
@@ -484,11 +469,11 @@
     $("#promoPhones").innerHTML = PROMO_PHONES.map(phone => `
       <article class="promo-card">
         <div class="promo-image-wrap"><img class="promo-image" src="${phone.angles[0].url}" alt="${phone.model}" loading="lazy"></div>
-        <p class="eyebrow">${phone.condition}</p>
+        <p class="eyebrow">Visuel provisoire · ${phone.condition}</p>
         <h3>${phone.model}</h3>
         <p>${phone.specs.screen} · ${phone.specs.chip} · ${phone.specs.camera}</p>
         <p class="price">${phone.price}</p>
-        <a class="button button-whatsapp" href="${waLink(`Bonjour ${STORE.name}, je suis intéressé par ${phone.model}.`)}" target="_blank" rel="noopener">Réserver <span aria-hidden="true">↗</span></a>
+        <a class="button button-whatsapp" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">Demander un devis <span aria-hidden="true">↗</span></a>
       </article>
     `).join("");
   }
@@ -524,20 +509,7 @@
     if (event.key === "ArrowLeft") setAngle(currentAngleIndex - 1);
   });
 
-  // Intro reveal, session gating, and delayed spotlight.
-  function schedulePromo() {
-    window.clearTimeout(promoTimer);
-    promoTimer = window.setTimeout(() => {
-      try {
-        if (sessionStorage.getItem("eldjoualSpotlightSeen")) return;
-        sessionStorage.setItem("eldjoualSpotlightSeen", "1");
-      } catch (error) {
-        // Continue to show the spotlight if storage is unavailable.
-      }
-      openPromo();
-    }, 6000);
-  }
-
+  // Intro reveal and session gating.
   function completeIntro() {
     const curtain = $("#introCurtain");
     if (!curtain || curtain.classList.contains("is-hidden")) return;
@@ -550,7 +522,6 @@
       curtain.style.transform = "";
     }
     if (lenis) lenis.start();
-    schedulePromo();
   }
 
   function finishIntro() {
@@ -578,7 +549,6 @@
       try {
         if (sessionStorage.getItem("samsungBootPlayed")) {
           curtain.classList.add("is-hidden");
-          schedulePromo();
           return;
         }
         sessionStorage.setItem("samsungBootPlayed", "true");
@@ -586,7 +556,6 @@
         // Keep the intro available even when browser storage is disabled.
       }
     } else {
-      window.clearTimeout(promoTimer);
       try {
         sessionStorage.setItem("samsungBootPlayed", "true");
       } catch (error) {
@@ -597,7 +566,6 @@
     if (reducedMotion) {
       curtain.classList.add("is-hidden");
       curtain.setAttribute("aria-hidden", "true");
-      schedulePromo();
       return;
     }
 
@@ -670,33 +638,6 @@
   }
 
   function initStoreContact() {
-    const status = $("#storeStatus");
-    const statusText = $("span", status);
-    const algiersClock = new Intl.DateTimeFormat("en-US", {
-      timeZone: "Africa/Algiers",
-      weekday: "short",
-      hour: "2-digit",
-      minute: "2-digit",
-      hourCycle: "h23"
-    });
-    const weekdayNumber = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-
-    function updateStatus() {
-      const parts = Object.fromEntries(
-        algiersClock.formatToParts(new Date()).map(({ type, value }) => [type, value])
-      );
-      const day = weekdayNumber[parts.weekday];
-      const minuteOfDay = Number(parts.hour) * 60 + Number(parts.minute);
-      const opensAt = day === 5 ? 15 * 60 : 9 * 60;
-      const isOpen = minuteOfDay >= opensAt && minuteOfDay < 22 * 60;
-
-      status.dataset.state = isOpen ? "open" : "closed";
-      statusText.textContent = isOpen ? "Ouvert · ferme à 22h00" : "Fermé";
-    }
-
-    updateStatus();
-    window.setInterval(updateStatus, 60_000);
-
     $("#copyPhone").addEventListener("click", copyPhoneNumber);
     $("#contactWhatsapp").href = waLink(`Bonjour ${STORE.name}, je souhaite obtenir des renseignements sur vos smartphones Samsung.`);
     $("#footerWhatsapp").href = waLink(`Bonjour ${STORE.name}, j'aimerais vous contacter.`);
@@ -711,7 +652,6 @@
     try {
       sessionStorage.removeItem("samsungBootPlayed");
       sessionStorage.removeItem("eldjoualIntroSeen");
-      sessionStorage.removeItem("eldjoualSpotlightSeen");
     } catch (error) {
       console.warn("La session ne peut pas être réinitialisée dans ce navigateur.", error);
     }

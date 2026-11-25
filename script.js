@@ -404,7 +404,7 @@
         <article class="phone-section ${reversed ? "is-reversed" : ""}" data-phone-section="${phone.id}">
           <div class="phone-stage" data-tilt>
             <div class="phone-ambient"></div>
-            <img class="phone-product-image ${phone.imageScale || "scale-100"}" src="${phone.image}" alt="${phone.model}" loading="lazy">
+            <img class="phone-product-image ${phone.imageScale || "scale-100"}" src="${phone.image}" alt="${phone.model}" loading="${phone.id === "a37-5g" ? "eager" : "lazy"}">
             <button class="phone-image-trigger" type="button" data-open-phone="${index}" aria-label="Explorer ${phone.model}"></button>
           </div>
           <div class="phone-copy">

@@ -17,9 +17,9 @@
       scene: "store",
       kicker: "DISTRIBUTEUR SAMSUNG ALGÉRIE",
       title: "EL DJOUAL",
-      subtitle: "DISTRIBUTEUR SAMSUNG ALGÉRIE • GARANTIE 12 MOIS • LIVRAISON 58 WILAYAS",
+      subtitle: "DISTRIBUTEUR SAMSUNG ALGÉRIE • GARANTIE 12 MOIS • LIVRAISON 69 WILAYAS",
       mission: "DISTRIBUTION NATIONALE • GARANTIE 12 MOIS • DEVIS SUR WHATSAPP ↗",
-      loadLabel: "RÉSEAU NATIONAL // 58 WILAYAS",
+      loadLabel: "RÉSEAU NATIONAL // 69 WILAYAS",
       image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2400&q=85",
       foreground: "assets/phones/samsung-a37.png",
       foregroundAlt: "Samsung Galaxy — visuel de présentation"
@@ -38,7 +38,7 @@
     {
       scene: "arrival",
       kicker: "DISTRIBUTION NATIONALE",
-      title: "58 WILAYAS",
+      title: "69 WILAYAS",
       subtitle: "SAMSUNG GALAXY • DISPONIBILITÉ SUR DEVIS",
       mission: "LIVRAISON NATIONALE • CONTACTEZ NOTRE ÉQUIPE COMMERCIALE ↗",
       loadLabel: "LIVRAISON // ALGÉRIE",
@@ -124,10 +124,127 @@
         updates: "Jusqu’à 6 générations Android",
         warranty: "Garantie 12 mois"
       }
+    },
+    {
+      id: "a37-5g",
+      model: "Samsung Galaxy A37 5G",
+      badge: "FABRIQUÉ EN ALGÉRIE · GARANTIE 12 MOIS",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Écran Super AMOLED 120 Hz, performances Exynos et résistance IP68 avec connectivité 5G.",
+      angles: [
+        { label: "Face", url: "assets/phones/samsung-a37.png" },
+        { label: "Dos", url: "assets/phones/samsung-a37.png" },
+        { label: "Profil", url: "assets/phones/samsung-a37.png" },
+        { label: "Détail", url: "assets/phones/samsung-a37.png" }
+      ],
+      specs: {
+        screen: '6,7" FHD+ Super AMOLED · 120 Hz · 1 900 nits · Gorilla Glass Victus+',
+        chip: "Exynos 1480 (4 nm)",
+        memory: "6/8/12 Go RAM · 128/256 Go UFS 3.1",
+        camera: "50 MP OIS + 8 MP ultra grand-angle + 5 MP · selfie 12 MP · vidéo 4K",
+        battery: "5 000 mAh · charge 45 W",
+        protection: "IP68",
+        network: "5G · eSIM",
+        software: "Android 16 · One UI 8.5",
+        updates: "6 ans de mises à jour",
+        origin: "Fabriqué en Algérie",
+        warranty: "Garantie 12 mois"
+      }
+    },
+    {
+      id: "a18",
+      model: "Samsung Galaxy A18",
+      badge: "FABRIQUÉ EN ALGÉRIE · GARANTIE 12 MOIS",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Grand écran Super AMOLED, processeur octa-core et fonctionnalités utiles au quotidien.",
+      angles: [
+        { label: "Face", url: "assets/phones/samsung-a57.png" },
+        { label: "Dos", url: "assets/phones/samsung-a57.png" },
+        { label: "Profil", url: "assets/phones/samsung-a57.png" },
+        { label: "Détail", url: "assets/phones/samsung-a57.png" }
+      ],
+      specs: {
+        screen: '6,7" FHD+ Super AMOLED · 90 Hz · Gorilla Glass 3',
+        chip: "Octa-core 6 nm · MediaTek Helio G99+",
+        memory: "4/6/8 Go RAM · 128/256 Go",
+        camera: "50 MP + 5 MP ultra grand-angle + 2 MP · selfie 13 MP",
+        battery: "5 000 mAh · charge 25 W",
+        protection: "IP64",
+        connectivity: "NFC",
+        software: "Android 17 · One UI 9",
+        updates: "6 ans de mises à jour",
+        origin: "Fabriqué en Algérie",
+        warranty: "Garantie 12 mois"
+      }
+    },
+    {
+      id: "a08",
+      model: "Samsung Galaxy A08",
+      badge: "FABRIQUÉ EN ALGÉRIE · GARANTIE 12 MOIS",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Grand écran 90 Hz, double appareil photo et batterie haute capacité.",
+      angles: [
+        { label: "Face", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Dos", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Profil", url: "assets/phones/samsung-s25-fe.png" },
+        { label: "Détail", url: "assets/phones/samsung-s25-fe.png" }
+      ],
+      specs: {
+        screen: '6,7" HD+ PLS LCD · 90 Hz',
+        chip: "MediaTek Helio G99+ (6 nm)",
+        memory: "4/6 Go RAM · 64/128 Go · microSD",
+        camera: "50 MP + 2 MP · selfie 8 MP",
+        battery: "6 000 mAh · charge 25 W",
+        protection: "IP64",
+        software: "Android 17 · One UI 9",
+        updates: "6 ans de mises à jour",
+        origin: "Fabriqué en Algérie",
+        warranty: "Garantie 12 mois"
+      }
+    },
+    {
+      id: "a07s",
+      model: "Samsung Galaxy A07s",
+      badge: "FABRIQUÉ EN ALGÉRIE · GARANTIE 12 MOIS",
+      condition: "Neuf · Garantie 12 mois",
+      price: "Prix sur devis",
+      summary: "Une expérience Galaxy accessible avec écran 90 Hz et stockage extensible.",
+      angles: [
+        { label: "Face", url: "assets/phones/samsung-z-flip6.jpg" },
+        { label: "Dos", url: "assets/phones/samsung-z-flip6.jpg" },
+        { label: "Profil", url: "assets/phones/samsung-z-flip6.jpg" },
+        { label: "Détail", url: "assets/phones/samsung-z-flip6.jpg" }
+      ],
+      specs: {
+        screen: '6,7" HD+ PLS LCD · 90 Hz',
+        chip: "MediaTek Helio G99+ (6 nm)",
+        memory: "4/6 Go RAM · 64/128 Go · microSD",
+        camera: "50 MP + 2 MP · selfie 8 MP",
+        battery: "5 000 mAh · charge 25 W",
+        protection: "IP54",
+        software: "Android 16 · One UI 8.5",
+        updates: "6 ans de mises à jour",
+        origin: "Fabriqué en Algérie",
+        warranty: "Garantie 12 mois"
+      }
     }
   ];
 
   const PROMO_PHONES = PHONES;
+  const PARTNERS = [
+    { name: "SONATRACH DG", sector: "energy", label: "Énergie & Hydrocarbures", logo: "sonatrach-dg.svg" },
+    { name: "Naftal", sector: "energy", label: "Énergie & Hydrocarbures", logo: "naftal.svg" },
+    { name: "Algérie Télécom", sector: "telecom", label: "Télécoms & Tech", logo: "algerie-telecom.svg" },
+    { name: "Yassir", sector: "telecom", label: "Télécoms & Tech", logo: "yassir.svg" },
+    { name: "SPA Cevital", sector: "industry", label: "Industrie & Agro", logo: "cevital.svg" },
+    { name: "SPA Brandt Algérie", sector: "industry", label: "Industrie & Agro", logo: "brandt-algerie.svg" },
+    { name: "SPA Saidal", sector: "health", label: "Santé & Pharma", logo: "saidal.svg" },
+    { name: "Hikma", sector: "health", label: "Santé & Pharma", logo: "hikma.svg" },
+    { name: "Journal El Massa", sector: "media", label: "Médias", logo: "el-massa.svg" }
+  ];
   const SPEC_LABELS = {
     screen: "Écran",
     chip: "Puce",
@@ -139,7 +256,11 @@
     feature: "Fonctions",
     protection: "Protection",
     updates: "Mises à jour",
-    warranty: "Garantie"
+    warranty: "Garantie",
+    origin: "Origine",
+    memory: "Mémoire & stockage",
+    connectivity: "Connectivité",
+    software: "Système"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -151,11 +272,10 @@
   let heroIndex = 0;
   let heroTimer;
   let heroTransitionTimer;
+  let partnerFilterTimer;
   let introTimer;
   let introTimeline;
   let lenis;
-  let currentPhoneIndex = 0;
-  let currentAngleIndex = 0;
   let lastFocus;
   let copyResetTimer;
 
@@ -192,7 +312,7 @@
       <button class="progress-track ${index === 0 ? "is-active" : ""}" type="button"
         data-slide="${index}" aria-label="Afficher ${slide.kicker}" aria-current="${index === 0}">
         <span class="progress-number">0${index + 1}</span>
-        <span class="progress-name">${slide.scene === "store" ? "DISTRIBUTEUR" : slide.scene === "repair" ? "GARANTIE" : "58 WILAYAS"}</span>
+        <span class="progress-name">${slide.scene === "store" ? "DISTRIBUTEUR" : slide.scene === "repair" ? "GARANTIE" : "69 WILAYAS"}</span>
         <span class="progress-fill"></span>
       </button>
     `).join("");
@@ -328,6 +448,59 @@
     initProductMotion();
   }
 
+  function renderPartnerGrid(sector = "all") {
+    const grid = $("#partnerGrid");
+    const partners = sector === "all" ? PARTNERS : PARTNERS.filter(partner => partner.sector === sector);
+    grid.innerHTML = partners.map(partner => `
+      <article class="partner-tile" data-sector="${partner.sector}">
+        <div class="partner-logo-frame">
+          <img class="partner-logo-image" src="assets/partners/${partner.logo}" alt="" aria-hidden="true" loading="lazy">
+          <span class="partner-logo-fallback">${partner.name}</span>
+        </div>
+        <p class="partner-sector-tag">${partner.label}</p>
+      </article>
+    `).join("");
+
+    $$(".partner-logo-image", grid).forEach(image => {
+      const fallback = image.nextElementSibling;
+      image.addEventListener("load", () => {
+        image.classList.add("is-loaded");
+        fallback.hidden = true;
+      }, { once: true });
+      image.addEventListener("error", () => {
+        image.hidden = true;
+      }, { once: true });
+      if (image.complete && image.naturalWidth > 0) {
+        image.classList.add("is-loaded");
+        fallback.hidden = true;
+      }
+    });
+  }
+
+  function initPartnerFilters() {
+    $("#partnerFilters").addEventListener("click", event => {
+      const selected = event.target.closest("[data-sector]");
+      if (!selected) return;
+
+      $$(".partner-filter").forEach(button => {
+        const active = button === selected;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      window.clearTimeout(partnerFilterTimer);
+      const grid = $("#partnerGrid");
+      grid.classList.add("is-filtering");
+      partnerFilterTimer = window.setTimeout(() => {
+        renderPartnerGrid(selected.dataset.sector);
+        window.requestAnimationFrame(() => {
+          window.requestAnimationFrame(() => grid.classList.remove("is-filtering"));
+        });
+      }, 140);
+    });
+    renderPartnerGrid();
+  }
+
   function initProductMotion() {
     const sections = $$(".phone-section");
 
@@ -372,13 +545,11 @@
     });
   }
 
-  // Product studio modal and its angle tabs.
+  // Product detail modal.
   function openPhone(index) {
     const phone = PHONES[index];
     if (!phone) return;
     closePromo();
-    currentPhoneIndex = index;
-    currentAngleIndex = 0;
     lastFocus = document.activeElement;
 
     $("#detailBadge").textContent = phone.badge;
@@ -389,39 +560,12 @@
       <div class="spec-row"><dt>${SPEC_LABELS[key] || key}</dt><dd>${value}</dd></div>
     `).join("");
     $("#detailWhatsApp").href = waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour le ${phone.model}.`, STORE.commercialWhatsapp);
-    $("#angleTabs").innerHTML = phone.angles.map((angle, angleIndex) => `
-      <button class="angle-tab ${angleIndex === 0 ? "is-active" : ""}" type="button"
-        data-angle="${angleIndex}" aria-pressed="${angleIndex === 0}">${angle.label}</button>
-    `).join("");
-
-    setAngle(0, false);
+    const image = $("#detailImage");
+    image.src = phone.angles[0].url;
+    image.alt = phone.model;
+    $("#studioViewer").classList.remove("is-zoomed");
     setModalOpen($("#detailModal"), true);
     $("#closeDetail").focus();
-  }
-
-  function setAngle(index, animate = true) {
-    const phone = PHONES[currentPhoneIndex];
-    currentAngleIndex = (index + phone.angles.length) % phone.angles.length;
-    const angle = phone.angles[currentAngleIndex];
-    const image = $("#detailImage");
-    const viewer = $("#studioViewer");
-
-    viewer.classList.remove("is-zoomed");
-    image.classList.toggle("is-changing", animate);
-    image.src = angle.url;
-    image.alt = `${phone.model} — ${angle.label}`;
-    $("#angleLabel").textContent = angle.label;
-    $$(".angle-tab").forEach((button, buttonIndex) => {
-      const active = buttonIndex === currentAngleIndex;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-    if (animate) {
-      window.setTimeout(() => image.classList.remove("is-changing"), 180);
-      if (hasGsap && !reducedMotion) {
-        window.gsap.fromTo(image, { y: 8, opacity: 0.55 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" });
-      }
-    }
   }
 
   function setModalOpen(modal, open) {
@@ -441,12 +585,6 @@
     const trigger = event.target.closest("[data-open-phone]");
     if (trigger) openPhone(Number(trigger.dataset.openPhone));
   });
-  $("#angleTabs").addEventListener("click", event => {
-    const tab = event.target.closest("[data-angle]");
-    if (tab) setAngle(Number(tab.dataset.angle));
-  });
-  $("#anglePrev").addEventListener("click", () => setAngle(currentAngleIndex - 1));
-  $("#angleNext").addEventListener("click", () => setAngle(currentAngleIndex + 1));
   $("#closeDetail").addEventListener("click", closePhone);
   $("#detailModal").addEventListener("click", event => {
     if (event.target === $("#detailModal")) closePhone();
@@ -480,7 +618,9 @@
 
   function openPromo() {
     closePhone();
-    lastFocus = document.activeElement;
+    lastFocus = $("#mobileMenu").classList.contains("is-open")
+      ? $("#mobileMenuToggle")
+      : document.activeElement;
     setModalOpen($("#promoModal"), true);
     $("#closePromo").focus();
   }
@@ -493,6 +633,7 @@
   }
 
   $("#openPromo").addEventListener("click", openPromo);
+  $("#openPromoMobile").addEventListener("click", openPromo);
   $("#closePromo").addEventListener("click", closePromo);
   $("#promoModal").addEventListener("click", event => {
     if (event.target === $("#promoModal")) closePromo();
@@ -502,11 +643,27 @@
     if (event.key === "Escape") {
       closePhone();
       closePromo();
+      if ($("#mobileMenu").classList.contains("is-open")) setMobileMenuOpen(false, true);
       return;
     }
-    if (!$("#detailModal").classList.contains("is-open")) return;
-    if (event.key === "ArrowRight") setAngle(currentAngleIndex + 1);
-    if (event.key === "ArrowLeft") setAngle(currentAngleIndex - 1);
+  });
+
+  function setMobileMenuOpen(open, restoreFocus = false) {
+    const menu = $("#mobileMenu");
+    const toggle = $("#mobileMenuToggle");
+    menu.classList.toggle("is-open", open);
+    menu.setAttribute("aria-hidden", String(!open));
+    menu.toggleAttribute("inert", !open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    if (!open && restoreFocus) toggle.focus();
+  }
+
+  $("#mobileMenuToggle").addEventListener("click", () => {
+    setMobileMenuOpen($("#mobileMenuToggle").getAttribute("aria-expanded") !== "true");
+  });
+  $("#mobileMenu").addEventListener("click", event => {
+    if (event.target.closest("a, button")) setMobileMenuOpen(false);
   });
 
   // Intro reveal and session gating.
@@ -662,9 +819,11 @@
 
   // Startup.
   $("#navWhatsApp").href = waLink(`Bonjour ${STORE.name}, j'ai une question.`);
+  $("#mobileWhatsApp").href = waLink(`Bonjour ${STORE.name}, j'ai une question.`);
   initStoreContact();
   renderHero();
   renderShowcase();
+  initPartnerFilters();
   renderPromo();
   initSmoothScroll();
   playIntro();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="EL DJOUAL DISTRIBUTION, distributeur Samsung en Algérie. Galaxy, garantie 12 mois et livraison dans les 58 wilayas.">
+  <meta name="description" content="EL DJOUAL DISTRIBUTION, distributeur Samsung en Algérie. Sélection Galaxy, modèles fabriqués en Algérie, garantie 12 mois et livraison dans les 69 wilayas.">
   <meta name="theme-color" content="#FFFFFF">
   <title>EL DJOUAL DISTRIBUTION — Samsung Galaxy Algérie</title>
 
@@ -39,7 +39,8 @@
       <a class="brand-mark" href="#accueil" aria-label="EL DJOUAL DISTRIBUTION, accueil">EL DJOUAL<span>.</span><small>DISTRIBUTION</small></a>
       <div class="nav-links">
         <a href="#catalogue">Catalogue</a>
-        <button id="openPromo" type="button">Sélection Samsung</button>
+        <a href="#partenaires">Partenaires</a>
+        <button id="openPromo" type="button">Sélection Galaxy</button>
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
@@ -64,7 +65,25 @@
         <span class="nav-social-divider" aria-hidden="true"></span>
         <a id="navWhatsApp" class="button button-whatsapp nav-cta" href="#" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
       </div>
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+    <div id="mobileMenu" class="mobile-menu" aria-label="Navigation mobile" aria-hidden="true" inert>
+      <nav class="mobile-menu-links" aria-label="Liens du site">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#partenaires">Partenaires</a>
+        <button id="openPromoMobile" type="button">Sélection Galaxy</button>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-socials" aria-label="Réseaux sociaux">
+        <a href="https://www.instagram.com/distributeursamsung" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.facebook.com/share/19xRUCJAJi/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+        <a href="https://www.tiktok.com/@distributeur.sams" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+        <a href="https://www.linkedin.com/in/distributeur-samsung-algerie-3a11b1452" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <a id="mobileWhatsApp" class="button button-whatsapp mobile-menu-cta" href="#" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main>
@@ -113,9 +132,26 @@
     </section>
 
     <section class="service-band" aria-label="Services Eldjoual">
-      <span>Distribution nationale · 58 Wilayas</span><i></i>
+      <span>Distribution nationale · 69 Wilayas</span><i></i>
       <span>Garantie officielle · 12 mois</span><i></i>
       <span>Distributeur Samsung Algérie</span>
+    </section>
+
+    <section id="partenaires" class="partners-section" aria-labelledby="partnersTitle">
+      <header class="partners-heading">
+        <p class="eyebrow">ILS NOUS FONT CONFIANCE</p>
+        <h2 id="partnersTitle">Nos partenaires par secteur.</h2>
+        <p>EL DJOUAL DISTRIBUTION accompagne les entreprises et les organisations dans leurs besoins en équipements Samsung à travers l’Algérie.</p>
+      </header>
+      <div id="partnerFilters" class="partner-filters" role="group" aria-label="Filtrer les partenaires par secteur">
+        <button class="partner-filter is-active" type="button" data-sector="all" aria-pressed="true">Tous</button>
+        <button class="partner-filter" type="button" data-sector="energy" aria-pressed="false">Énergie &amp; Hydrocarbures</button>
+        <button class="partner-filter" type="button" data-sector="telecom" aria-pressed="false">Télécoms &amp; Tech</button>
+        <button class="partner-filter" type="button" data-sector="industry" aria-pressed="false">Industrie &amp; Agro</button>
+        <button class="partner-filter" type="button" data-sector="health" aria-pressed="false">Santé &amp; Pharma</button>
+        <button class="partner-filter" type="button" data-sector="media" aria-pressed="false">Médias</button>
+      </div>
+      <div id="partnerGrid" class="partner-grid" aria-live="polite"></div>
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contactTitle">
@@ -125,7 +161,7 @@
           <h2 id="contactTitle">Un contact direct. Un réseau national.</h2>
         </div>
         <span id="storeStatus" class="store-status" role="status" aria-live="polite">
-          <i aria-hidden="true"></i><span>Livraison nationale · 58 wilayas</span>
+          <i aria-hidden="true"></i><span>Livraison nationale · 69 wilayas</span>
         </span>
       </div>
 
@@ -134,7 +170,7 @@
           <div class="contact-info">
             <article class="contact-card">
               <p class="contact-card-label">Distribution nationale</p>
-              <address>Algérie<br>Livraison dans les 58 wilayas</address>
+              <address>Algérie<br>Livraison dans les 69 wilayas</address>
               <a id="storeDirections" class="contact-text-link" href="https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac" target="_blank" rel="noopener noreferrer">
                 Ouvrir l’itinéraire GPS <span aria-hidden="true">↗</span>
               </a>
@@ -193,13 +229,9 @@
       <div class="studio-gallery">
         <div id="studioViewer" class="studio-viewer">
           <div class="studio-glow"></div>
-          <button id="anglePrev" class="viewer-arrow viewer-prev" type="button" aria-label="Angle précédent">←</button>
           <img id="detailImage" class="studio-image" src="" alt="">
-          <button id="angleNext" class="viewer-arrow viewer-next" type="button" aria-label="Angle suivant">→</button>
-          <span id="angleLabel" class="angle-label"></span>
         </div>
-        <div id="angleTabs" class="angle-tabs" aria-label="Angles du produit"></div>
-        <p class="gallery-hint">Visuels provisoires · survolez pour agrandir · utilisez ← → pour changer d'angle</p>
+        <p class="gallery-hint">Visuel produit provisoire</p>
       </div>
       <div class="studio-details">
         <p id="detailBadge" class="model-badge"></p>
@@ -228,7 +260,7 @@
     <div class="footer-top">
       <div>
         <a class="brand-mark footer-brand" href="#accueil">EL DJOUAL<span>.</span><small>DISTRIBUTION</small></a>
-        <p class="footer-tagline">Distributeur Samsung en Algérie · Garantie 12 mois · Livraison 58 Wilayas.</p>
+        <p class="footer-tagline">Distributeur Samsung en Algérie · Garantie 12 mois · Livraison 69 Wilayas.</p>
         <p class="logo-attribution">
           Logo Samsung : <a href="https://commons.wikimedia.org/wiki/File:Samsung_Orig_Wordmark_BLACK_RGB.png" target="_blank" rel="noopener noreferrer">Samsung, via Wikimedia Commons</a> ·
           <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (couleurs adaptées).

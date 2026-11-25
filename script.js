@@ -319,7 +319,7 @@
     $("#heroTitle").textContent = slide.title;
     const subtitleEl = $("#heroSubtitle");
     if (Array.isArray(slide.subtitle)) {
-      subtitleEl.className = "hero-subtitle hero-bio max-w-2xl space-y-2.5 text-sm sm:text-base text-white/90 leading-relaxed bg-black/30 backdrop-blur-sm border-l-2 border-[#0381FE] p-4 sm:p-5 my-4";
+      subtitleEl.className = "hero-subtitle hero-bio w-full max-w-5xl space-y-2.5 text-sm sm:text-base text-white/90 leading-relaxed bg-black/30 backdrop-blur-sm border-l-2 border-[#0381FE] p-4 sm:p-5 my-4";
       subtitleEl.innerHTML = slide.subtitle.map(paragraph => `<p>${paragraph}</p>`).join("");
     } else {
       subtitleEl.className = "hero-subtitle";

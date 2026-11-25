@@ -1387,11 +1387,14 @@ button, a { color: inherit; }
   bottom: auto;
   left: auto;
   right: auto;
+  align-self: stretch;
+  width: auto;
+  max-width: 72rem;
   margin: 0 max(6vw, calc((100vw - 1200px) / 2)) 2.5rem;
-  width: min(760px, calc(min(1200px, 88vw) - min(330px, 28vw) - 2rem));
 }
 .hero-subtitle.hero-bio {
-  max-width: 42rem;
+  width: 100%;
+  max-width: 64rem;
   margin: 1rem 0;
   padding: 1rem;
   border-left: 2px solid #0381FE;

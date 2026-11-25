@@ -1266,3 +1266,18 @@ button, a { color: inherit; }
   .accessory-icon { margin: 1rem 0 .7rem; }
   .accessories-cta { width: 100%; justify-content: center; }
 }
+
+@media (max-width: 760px) {
+  .hero-copy { right: 0; left: 0; width: auto; padding-inline: 1.25rem; }
+  .hero-copy .hero-title {
+    font-size: clamp(2rem, 9vw, 5.5rem);
+    line-height: .95;
+    letter-spacing: -.025em;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 639px) {
+  .progress-name { display: none; }
+  .progress-track { grid-template-columns: 1fr; justify-items: center; }
+}

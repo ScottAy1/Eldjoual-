@@ -6,7 +6,7 @@
   const STORE = {
     name: "EL DJOUAL DISTRIBUTION",
     whatsapp: "213563516895",
-    commercialWhatsapp: "213552856155",
+    commercialWhatsapp: "213563516895",
     phoneDisplay: "0563 51 68 95",
     mapsUrl: "https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac"
   };
@@ -18,7 +18,11 @@
       progressLabel: "DISTRIBUTEUR",
       kicker: "DISTRIBUTEUR OFFICIEL SAMSUNG ALGÉRIE",
       title: "EL DJOUAL DISTRIBUTION",
-      subtitle: "Distributeur Officiel Samsung Algérie",
+      subtitle: [
+        "EL DJOUAL DISTRIBUTION est une entreprise spécialisée dans la distribution de produits de téléphonie mobile de la marque Samsung en Algérie. Depuis 2006, nous mettons notre expérience et notre connaissance du marché au service des professionnels, des entreprises et de nos partenaires commerciaux.",
+        "Nous proposons une offre adaptée aux besoins du marché, un accompagnement commercial personnalisé.",
+        "Forts de près de 20 ans d'expérience, nous poursuivons notre développement avec une ambition claire : renforcer notre présence sur le marché algérien et construire un réseau de distribution solide et durable, fondé sur la confiance, la proximité et la qualité de service."
+      ],
       mission: "DISTRIBUTION NATIONALE • GARANTIE 12 MOIS • DEVIS SUR WHATSAPP ↗",
       loadLabel: "DISTRIBUTEUR OFFICIEL // ALGÉRIE",
       image: "assets/phones/samsung-a37.png",
@@ -313,7 +317,14 @@
     });
     $("#heroKicker").textContent = slide.kicker;
     $("#heroTitle").textContent = slide.title;
-    $("#heroSubtitle").textContent = slide.subtitle;
+    const subtitleEl = $("#heroSubtitle");
+    if (Array.isArray(slide.subtitle)) {
+      subtitleEl.className = "hero-subtitle hero-bio max-w-2xl space-y-2.5 text-sm sm:text-base text-white/90 leading-relaxed bg-black/30 backdrop-blur-sm border-l-2 border-[#0381FE] p-4 sm:p-5 my-4";
+      subtitleEl.innerHTML = slide.subtitle.map(paragraph => `<p>${paragraph}</p>`).join("");
+    } else {
+      subtitleEl.className = "hero-subtitle";
+      subtitleEl.textContent = slide.subtitle;
+    }
     $("#heroMission").textContent = slide.mission;
     $("#heroLoadLabel").textContent = slide.loadLabel;
     $("#heroLoadStep").textContent = `0${heroIndex + 1} / 0${HERO_SLIDES.length}`;

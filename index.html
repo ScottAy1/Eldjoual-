@@ -36,7 +36,7 @@
 
   <header class="site-header">
     <nav class="nav-pill" aria-label="Navigation principale">
-      <a class="brand-mark" href="#accueil" aria-label="EL DJOUAL DISTRIBUTION, accueil">EL DJOUAL<span>.</span><small>DISTRIBUTION</small></a>
+      <a class="brand-mark nav-brand-mark" href="#accueil" aria-label="EL DJOUAL DISTRIBUTION, accueil"><img class="nav-brand-logo" src="assets/logo/Logo.jpeg" alt="EL DJOUAL DISTRIBUTION"></a>
       <div class="nav-links">
         <a href="#catalogue">Catalogue</a>
         <a href="#accessoires">Accessoires</a>
@@ -95,7 +95,7 @@
   </header>
 
   <main>
-    <section id="accueil" class="hero-stage comic-stage" aria-label="Sélection Eldjoual Samsung Galaxy">
+    <section id="accueil" class="hero-stage comic-stage min-h-screen py-24" aria-label="Sélection Eldjoual Samsung Galaxy">
       <div id="heroSlides" class="hero-slides" aria-live="off"></div>
       <div class="hero-vignette" aria-hidden="true"></div>
       <div class="hero-ink-overlay" aria-hidden="true"></div>
@@ -103,8 +103,12 @@
       <div class="hero-copy">
         <span class="eyebrow hero-eyebrow">EL DJOUAL DISTRIBUTION // ALGÉRIE</span>
         <p id="heroKicker" class="hero-kicker"></p>
-        <h1 id="heroTitle" class="hero-title"></h1>
-        <p id="heroSubtitle" class="hero-subtitle"></p>
+        <h1 id="heroTitle" class="hero-title">EL DJOUAL DISTRIBUTION</h1>
+        <div id="heroSubtitle" class="hero-subtitle hero-bio max-w-2xl space-y-2.5 text-sm sm:text-base text-white/90 leading-relaxed bg-black/30 backdrop-blur-sm border-l-2 border-[#0381FE] p-4 sm:p-5 my-4">
+          <p>EL DJOUAL DISTRIBUTION est une entreprise spécialisée dans la distribution de produits de téléphonie mobile de la marque Samsung en Algérie. Depuis 2006, nous mettons notre expérience et notre connaissance du marché au service des professionnels, des entreprises et de nos partenaires commerciaux.</p>
+          <p>Nous proposons une offre adaptée aux besoins du marché, un accompagnement commercial personnalisé.</p>
+          <p>Forts de près de 20 ans d'expérience, nous poursuivons notre développement avec une ambition claire : renforcer notre présence sur le marché algérien et construire un réseau de distribution solide et durable, fondé sur la confiance, la proximité et la qualité de service.</p>
+        </div>
         <a href="#catalogue" class="button hero-cta">Entrer dans le catalogue <span aria-hidden="true">↓</span></a>
         <div class="hero-load-status" aria-label="Chargement des nouveautés">
           <span class="hero-loading-wheel" aria-hidden="true"></span>
@@ -130,6 +134,46 @@
       </div>
     </section>
 
+    <section class="trust-bar" aria-label="Nos engagements">
+      <div class="trust-bar-inner">
+        <article class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m3 7 4.5-2.5L12 7l-4.5 2.5L3 7Z"/><path d="M12 7l4.5-2.5L21 7l-4.5 2.5L12 7Z"/><path d="M3 7v5l4.5 2.5 4.5-2.5V7"/><path d="M12 7v5l4.5 2.5L21 12V7"/><path d="M7.5 14.5v5L12 22l4.5-2.5v-5"/>
+          </svg>
+          <h3>Stock disponible</h3>
+          <p>Produits Samsung officiels en stock physique</p>
+        </article>
+        <article class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="7.5" cy="16.5" r="3.5"/><path d="M11 16.5h8l2-3-2-3h-5l-2-3H9"/><path d="M7.5 16.5h.01M16 10.5v3h3"/><path d="M7.5 13V5"/>
+          </svg>
+          <h3>Livraison 69 Wilayas</h3>
+          <p>Expédition rapide partout en Algérie</p>
+        </article>
+        <article class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3-.6L4 20l1.6-4.2a7.4 7.4 0 0 1-.6-3A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8.5 11.5h.01M12.5 11.5h.01M16.5 11.5h.01"/>
+          </svg>
+          <h3>On vous répond !</h3>
+          <p>Joignez-nous au <a href="tel:+213552856155">0552 85 61 55</a></p>
+        </article>
+        <article class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m8 12 2.2 2.2a2 2 0 0 0 2.8 0l1-1"/><path d="m14 13 1.2 1.2a2 2 0 0 0 2.8 0l2-2a2 2 0 0 0 0-2.8l-3-3a2 2 0 0 0-2.8 0L13 7.6"/><path d="m10 11-1.2-1.2a2 2 0 0 0-2.8 0l-2 2a2 2 0 0 0 0 2.8l3 3a2 2 0 0 0 2.8 0L11 16.4"/><path d="m8 6 1-1a2 2 0 0 1 2.8 0l3 3"/>
+          </svg>
+          <h3>Tarifs B2B compétitifs</h3>
+          <p>Prix négociés pour professionnels &amp; revendeurs</p>
+        </article>
+        <article class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h3>Garantie 12 mois</h3>
+          <p>Garantie officielle &amp; service après-vente</p>
+        </article>
+      </div>
+    </section>
+
     <section id="catalogue" class="catalogue-section">
       <div class="section-heading">
         <p class="eyebrow">Sélection Eldjoual</p>
@@ -139,10 +183,32 @@
       <div id="phoneShowcase" class="phone-showcase"></div>
     </section>
 
-    <section class="service-band" aria-label="Services Eldjoual">
-      <span>Distribution nationale · 69 Wilayas</span><i></i>
-      <span>Garantie officielle · 12 mois</span><i></i>
-      <span>Distributeur Samsung Algérie</span>
+    <section class="service-band service-details" aria-label="Services Eldjoual">
+      <div class="service-grid">
+        <article class="service-item">
+          <h3>Distribution nationale · 69 Wilayas</h3>
+          <p>Livraison rapide et fiable partout en Algérie, au service de nos clients dans les 69 wilayas.</p>
+        </article>
+        <article class="service-item">
+          <h3>Garantie officielle · 12 mois</h3>
+          <p>Vos appareils Samsung bénéficient d’une garantie officielle d’un an et d’un accompagnement dédié.</p>
+        </article>
+        <article class="service-item">
+          <h3>Distributeur Samsung Algérie</h3>
+          <p>Un approvisionnement en produits Samsung authentiques, adapté aux besoins des professionnels et revendeurs.</p>
+        </article>
+      </div>
+      <article class="service-sav" aria-labelledby="serviceSavTitle">
+        <h3 id="serviceSavTitle">Service Après-Vente (SAV) Samsung</h3>
+        <p>Les matériels Samsung sont garantis un an pièces et main-d'œuvre, à l'exclusion des dommages décrits dans nos Conditions Générales de Vente.</p>
+        <p>Le matériel est à retourner directement au centre de réparation suivant :<br>
+          <strong>MYME TELECOMMUNICATION</strong><br>
+          Av. des Frères Abdeslami, Kouba<br>
+          Tél. : 0780 10 01 00<br>
+          Site : <a href="https://mymetelecom.com" target="_blank" rel="noopener noreferrer">mymetelecom.com</a>
+        </p>
+        <p>Le matériel doit être retourné avec sa boîte, accompagné d'un courrier mentionnant vos coordonnées et une description de la panne.</p>
+      </article>
     </section>
 
     <section id="accessoires" class="accessories-section" aria-labelledby="accessoriesTitle">
@@ -154,6 +220,9 @@
       <div class="accessories-grid">
         <article class="accessory-card">
           <span class="accessory-number">01</span>
+          <div class="accessory-image-box h-48 w-full bg-[#F5F6F8] flex items-center justify-center p-2 mb-5 overflow-visible relative group">
+            <img src="assets/accessories/earphones.png" alt="Écouteurs &amp; Audio Samsung Galaxy" class="accessory-image h-full w-full object-contain scale-125 drop-shadow-[0_14px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-out group-hover:scale-[1.35] group-hover:-translate-y-2" loading="lazy">
+          </div>
           <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
             <path d="M5 13h2v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2ZM17 13h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2z"/>
@@ -163,6 +232,9 @@
         </article>
         <article class="accessory-card">
           <span class="accessory-number">02</span>
+          <div class="accessory-image-box h-48 w-full bg-[#F5F6F8] flex items-center justify-center p-2 mb-5 overflow-visible relative group">
+            <img src="assets/accessories/powerbank.png" alt="Power Banks Samsung Galaxy" class="accessory-image h-full w-full object-contain scale-125 drop-shadow-[0_14px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-out group-hover:scale-[1.35] group-hover:-translate-y-2" loading="lazy">
+          </div>
           <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="5" y="4" width="14" height="18" rx="1"/>
             <path d="M10 2h4M12 8l-3 5h4l-1 4"/>
@@ -172,12 +244,37 @@
         </article>
         <article class="accessory-card">
           <span class="accessory-number">03</span>
+          <div class="accessory-image-box h-48 w-full bg-[#F5F6F8] flex items-center justify-center p-2 mb-5 overflow-visible relative group">
+            <img src="assets/accessories/charger.png" alt="Chargeurs &amp; Câbles Samsung Super Fast Charging" class="accessory-image h-full w-full object-contain scale-125 drop-shadow-[0_14px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-out group-hover:scale-[1.35] group-hover:-translate-y-2" loading="lazy">
+          </div>
           <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M7 3v5M11 3v5M6 8h6v3a3 3 0 0 1-3 3v7"/>
             <path d="M16 5h4v6h-4zM18 11v4"/>
           </svg>
           <h3>Chargeurs &amp; Câbles</h3>
           <p>Adaptateurs secteur 25W/45W Super Fast Charging &amp; câbles USB-C</p>
+        </article>
+        <article class="accessory-card">
+          <span class="accessory-number">04</span>
+          <div class="accessory-image-box h-48 w-full bg-[#F5F6F8] flex items-center justify-center p-2 mb-5 overflow-visible relative group">
+            <img src="assets/accessories/case.png" alt="Coques de protection Samsung Galaxy" class="accessory-image h-full w-full object-contain scale-125 drop-shadow-[0_14px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-out group-hover:scale-[1.35] group-hover:-translate-y-2" loading="lazy">
+          </div>
+          <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 5h4M11 18.5h2"/>
+          </svg>
+          <h3>Coques de protection</h3>
+          <p>Coques résistantes et élégantes pour protéger vos appareils Galaxy</p>
+        </article>
+        <article class="accessory-card">
+          <span class="accessory-number">05</span>
+          <div class="accessory-image-box h-48 w-full bg-[#F5F6F8] flex items-center justify-center p-2 mb-5 overflow-visible relative group">
+            <img src="assets/accessories/screen-protector.png" alt="Protections d’écran pour smartphones Samsung Galaxy" class="accessory-image h-full w-full object-contain scale-125 drop-shadow-[0_14px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-out group-hover:scale-[1.35] group-hover:-translate-y-2" loading="lazy">
+          </div>
+          <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 5h6M10 19h4M12 9v5M9.5 11.5h5"/>
+          </svg>
+          <h3>Protections d’écran</h3>
+          <p>Films et verres trempés pour préserver l’écran de vos smartphones</p>
         </article>
       </div>
       <div class="accessories-cta-wrap">

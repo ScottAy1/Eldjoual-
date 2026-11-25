@@ -265,6 +265,7 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const waLink = (message, number = STORE.whatsapp) => `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  const WHATSAPP_ICON = '<svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1.2-5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.2 8.2c.2-.5.5-.7.8-.7h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4 0 .6l-.6.7a.5.5 0 0 0 0 .6c.4.7 1.1 1.5 1.8 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.3.6-.1.4-.4.8-.8 1.1-.4.3-.9.4-1.4.3-.9-.1-2-.7-3.1-1.7-1.1-.9-1.8-2-2.1-2.9-.2-.6-.1-1.1.1-1.5Z"/></svg>';
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasGsap = Boolean(window.gsap && window.ScrollTrigger);
   if (hasGsap) window.gsap.registerPlugin(window.ScrollTrigger);
@@ -438,7 +439,7 @@
             <div class="phone-purchase">
               <p class="phone-price">${phone.price}</p>
               <button class="button button-dark" type="button" data-open-phone="${index}">Explorer l'appareil <span aria-hidden="true">↗</span></button>
-              <a class="button button-outline" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis et commander le ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">Demander un devis / Commander sur WhatsApp <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis et commander le ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">${WHATSAPP_ICON}Demander un devis / Commander sur WhatsApp <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -586,6 +587,15 @@
     if (trigger) openPhone(Number(trigger.dataset.openPhone));
   });
   $("#closeDetail").addEventListener("click", closePhone);
+  $("#closeDetail").addEventListener("pointerdown", event => {
+    if (event.button === 0) {
+      event.preventDefault();
+      closePhone();
+    }
+  });
+  $("#detailModal").addEventListener("pointerdown", event => {
+    if (event.button === 0 && event.target === $("#detailModal")) closePhone();
+  });
   $("#detailModal").addEventListener("click", event => {
     if (event.target === $("#detailModal")) closePhone();
   });
@@ -611,7 +621,7 @@
         <h3>${phone.model}</h3>
         <p>${phone.specs.screen} · ${phone.specs.chip} · ${phone.specs.camera}</p>
         <p class="price">${phone.price}</p>
-        <a class="button button-whatsapp" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">Demander un devis <span aria-hidden="true">↗</span></a>
+        <a class="button button-whatsapp" href="${waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour ${phone.model}.`, STORE.commercialWhatsapp)}" target="_blank" rel="noopener">${WHATSAPP_ICON}Demander un devis <span aria-hidden="true">↗</span></a>
       </article>
     `).join("");
   }
@@ -635,6 +645,15 @@
   $("#openPromo").addEventListener("click", openPromo);
   $("#openPromoMobile").addEventListener("click", openPromo);
   $("#closePromo").addEventListener("click", closePromo);
+  $("#closePromo").addEventListener("pointerdown", event => {
+    if (event.button === 0) {
+      event.preventDefault();
+      closePromo();
+    }
+  });
+  $("#promoModal").addEventListener("pointerdown", event => {
+    if (event.button === 0 && event.target === $("#promoModal")) closePromo();
+  });
   $("#promoModal").addEventListener("click", event => {
     if (event.target === $("#promoModal")) closePromo();
   });
@@ -664,6 +683,29 @@
   });
   $("#mobileMenu").addEventListener("click", event => {
     if (event.target.closest("a, button")) setMobileMenuOpen(false);
+  });
+
+  document.addEventListener("click", event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+    const target = document.getElementById(decodeURIComponent(href.slice(1)));
+    if (!target) return;
+
+    event.preventDefault();
+    if ($("#mobileMenu").classList.contains("is-open")) setMobileMenuOpen(false);
+    if (lenis) {
+      lenis.start();
+      lenis.scrollTo(target, {
+        duration: 1.4,
+        offset: -80,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      });
+    } else {
+      target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    }
   });
 
   // Intro reveal and session gating.

@@ -11,44 +11,58 @@
     mapsUrl: "https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac"
   };
 
-  // Swap the artwork and foreground product in each scene for your own photos.
+  // Use local product imagery for the hero scenes; replace these paths with banner artwork as needed.
   const HERO_SLIDES = [
     {
       scene: "store",
-      kicker: "DISTRIBUTEUR SAMSUNG ALGÉRIE",
-      title: "EL DJOUAL",
-      subtitle: "DISTRIBUTEUR SAMSUNG ALGÉRIE • GARANTIE 12 MOIS • LIVRAISON 69 WILAYAS",
+      progressLabel: "DISTRIBUTEUR",
+      kicker: "DISTRIBUTEUR OFFICIEL SAMSUNG ALGÉRIE",
+      title: "EL DJOUAL DISTRIBUTION",
+      subtitle: "Distributeur Officiel Samsung Algérie",
       mission: "DISTRIBUTION NATIONALE • GARANTIE 12 MOIS • DEVIS SUR WHATSAPP ↗",
-      loadLabel: "RÉSEAU NATIONAL // 69 WILAYAS",
-      image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2400&q=85",
+      loadLabel: "DISTRIBUTEUR OFFICIEL // ALGÉRIE",
+      image: "assets/phones/samsung-a37.png",
+      foreground: "assets/phones/samsung-a26.png",
+      foregroundAlt: "Smartphone Samsung Galaxy"
+    },
+    {
+      scene: "galaxy",
+      progressLabel: "GAMME GALAXY A",
+      kicker: "SMARTPHONES SAMSUNG",
+      title: "GAMME GALAXY A",
+      subtitle: "A37 5G, A26 5G, A18, A17, A08, A07s, A07 • Garantie 12 Mois",
+      mission: "SEPT MODÈLES GALAXY A • GARANTIE 12 MOIS",
+      loadLabel: "GALAXY A // 7 MODÈLES",
+      image: "assets/phones/samsung-a26.png",
       foreground: "assets/phones/samsung-a37.png",
-      foregroundAlt: "Samsung Galaxy — visuel de présentation"
+      foregroundAlt: "Smartphone Samsung Galaxy série A"
     },
     {
-      scene: "repair",
-      kicker: "GARANTIE OFFICIELLE",
-      title: "12 MOIS",
-      subtitle: "UN SERVICE COMMERCIAL À VOTRE ÉCOUTE",
-      mission: "SERVICE COMMERCIAL • 0552 85 61 55 • COMMERCIAL@ELDJOUAL.COM",
-      loadLabel: "GARANTIE // 12 MOIS",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2400&q=85",
-      foreground: "assets/phones/samsung-s25-fe.png",
-      foregroundAlt: "Samsung Galaxy — visuel de présentation"
+      scene: "distribution",
+      progressLabel: "58 WILAYAS",
+      kicker: "LIVRAISON & APPROVISIONNEMENT B2B",
+      title: "DISTRIBUTION NATIONALE",
+      subtitle: "Livraison & Approvisionnement B2B sur 58 Wilayas",
+      mission: "APPROVISIONNEMENT B2B • LIVRAISON NATIONALE ↗",
+      loadLabel: "RÉSEAU NATIONAL // 58 WILAYAS",
+      image: "assets/phones/samsung-a17.png",
+      foreground: "assets/phones/samsung-a07.png",
+      foregroundAlt: "Smartphone Samsung Galaxy prêt pour la distribution"
     },
     {
-      scene: "arrival",
-      kicker: "DISTRIBUTION NATIONALE",
-      title: "69 WILAYAS",
-      subtitle: "SAMSUNG GALAXY • DISPONIBILITÉ SUR DEVIS",
-      mission: "LIVRAISON NATIONALE • CONTACTEZ NOTRE ÉQUIPE COMMERCIALE ↗",
-      loadLabel: "LIVRAISON // ALGÉRIE",
-      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=2400&q=85",
-      foreground: "assets/phones/samsung-z-flip6.jpg",
-      foregroundAlt: "Samsung Galaxy — visuel de présentation"
+      scene: "accessories",
+      progressLabel: "ACCESSOIRES",
+      kicker: "ÉQUIPEZ VOTRE QUOTIDIEN",
+      title: "ACCESSOIRES ORIGINAUX",
+      subtitle: "Écouteurs, Power Banks & Chargeurs Rapides",
+      mission: "AUDIO • POWER BANKS • CHARGEURS RAPIDES",
+      loadLabel: "ACCESSOIRES // GALAXY",
+      image: "assets/phones/samsung-a08.png",
+      foreground: "assets/phones/samsung-a07s.png",
+      foregroundAlt: "Smartphone Samsung Galaxy et accessoires"
     }
   ];
 
-  // Temporary angle-image placeholders can be replaced with official product photos.
   const PHONES = [
     {
       id: "a26-5g",
@@ -57,12 +71,7 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Un écran Super AMOLED fluide, la 5G et un appareil photo stabilisé pour le quotidien.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-a37.png" },
-        { label: "Dos", url: "assets/phones/samsung-a37.png" },
-        { label: "Profil", url: "assets/phones/samsung-a37.png" },
-        { label: "Détail", url: "assets/phones/samsung-a37.png" }
-      ],
+      image: "assets/phones/samsung-a26.png",
       specs: {
         screen: '6,7" FHD+ Super AMOLED · 120 Hz',
         chip: "Exynos 1380",
@@ -82,12 +91,7 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Un grand écran Super AMOLED, une batterie longue durée et l’essentiel Galaxy.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-a57.png" },
-        { label: "Dos", url: "assets/phones/samsung-a57.png" },
-        { label: "Profil", url: "assets/phones/samsung-a57.png" },
-        { label: "Détail", url: "assets/phones/samsung-a57.png" }
-      ],
+      image: "assets/phones/samsung-a17.png",
       specs: {
         screen: '6,7" FHD+ Super AMOLED · 90 Hz',
         chip: "MediaTek Helio G99 (version 4G)",
@@ -107,12 +111,7 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Un Galaxy accessible avec un grand écran 90 Hz et une autonomie de 5 000 mAh.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Dos", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Profil", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Détail", url: "assets/phones/samsung-s25-fe.png" }
-      ],
+      image: "assets/phones/samsung-a07.png",
       specs: {
         screen: '6,7" HD+ PLS LCD · 90 Hz',
         chip: "MediaTek Helio G99",
@@ -132,12 +131,8 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Écran Super AMOLED 120 Hz, performances Exynos et résistance IP68 avec connectivité 5G.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-a37.png" },
-        { label: "Dos", url: "assets/phones/samsung-a37.png" },
-        { label: "Profil", url: "assets/phones/samsung-a37.png" },
-        { label: "Détail", url: "assets/phones/samsung-a37.png" }
-      ],
+      image: "assets/phones/samsung-a37.png",
+      imageScale: "scale-125",
       specs: {
         screen: '6,7" FHD+ Super AMOLED · 120 Hz · 1 900 nits · Gorilla Glass Victus+',
         chip: "Exynos 1480 (4 nm)",
@@ -159,12 +154,7 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Grand écran Super AMOLED, processeur octa-core et fonctionnalités utiles au quotidien.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-a57.png" },
-        { label: "Dos", url: "assets/phones/samsung-a57.png" },
-        { label: "Profil", url: "assets/phones/samsung-a57.png" },
-        { label: "Détail", url: "assets/phones/samsung-a57.png" }
-      ],
+      image: "assets/phones/samsung-a18.png",
       specs: {
         screen: '6,7" FHD+ Super AMOLED · 90 Hz · Gorilla Glass 3',
         chip: "Octa-core 6 nm · MediaTek Helio G99+",
@@ -186,12 +176,8 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Grand écran 90 Hz, double appareil photo et batterie haute capacité.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Dos", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Profil", url: "assets/phones/samsung-s25-fe.png" },
-        { label: "Détail", url: "assets/phones/samsung-s25-fe.png" }
-      ],
+      image: "assets/phones/samsung-a08.png",
+      imageScale: "scale-125",
       specs: {
         screen: '6,7" HD+ PLS LCD · 90 Hz',
         chip: "MediaTek Helio G99+ (6 nm)",
@@ -212,12 +198,7 @@
       condition: "Neuf · Garantie 12 mois",
       price: "Prix sur devis",
       summary: "Une expérience Galaxy accessible avec écran 90 Hz et stockage extensible.",
-      angles: [
-        { label: "Face", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Dos", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Profil", url: "assets/phones/samsung-z-flip6.jpg" },
-        { label: "Détail", url: "assets/phones/samsung-z-flip6.jpg" }
-      ],
+      image: "assets/phones/samsung-a07s.png",
       specs: {
         screen: '6,7" HD+ PLS LCD · 90 Hz',
         chip: "MediaTek Helio G99+ (6 nm)",
@@ -235,15 +216,15 @@
 
   const PROMO_PHONES = PHONES;
   const PARTNERS = [
-    { name: "SONATRACH DG", sector: "energy", label: "Énergie & Hydrocarbures", logo: "sonatrach-dg.svg" },
-    { name: "Naftal", sector: "energy", label: "Énergie & Hydrocarbures", logo: "naftal.svg" },
-    { name: "Algérie Télécom", sector: "telecom", label: "Télécoms & Tech", logo: "algerie-telecom.svg" },
-    { name: "Yassir", sector: "telecom", label: "Télécoms & Tech", logo: "yassir.svg" },
-    { name: "SPA Cevital", sector: "industry", label: "Industrie & Agro", logo: "cevital.svg" },
-    { name: "SPA Brandt Algérie", sector: "industry", label: "Industrie & Agro", logo: "brandt-algerie.svg" },
-    { name: "SPA Saidal", sector: "health", label: "Santé & Pharma", logo: "saidal.svg" },
+    { name: "SONATRACH DG", sector: "energy", label: "Énergie & Hydrocarbures", logo: "Sonatrach.svg" },
+    { name: "Naftal", sector: "energy", label: "Énergie & Hydrocarbures", logo: "Logo_NAFTAL.svg" },
+    { name: "Algérie Télécom", sector: "telecom", label: "Télécoms & Tech", logo: "Algérie_Télécom.svg" },
+    { name: "Yassir", sector: "telecom", label: "Télécoms & Tech", logo: "Logo_Yassir.svg" },
+    { name: "SPA Cevital", sector: "industry", label: "Industrie & Agro", logo: "Cevital.svg" },
+    { name: "SPA Brandt Algérie", sector: "industry", label: "Industrie & Agro", logo: "BRANDT.svg" },
+    { name: "SPA Saidal", sector: "health", label: "Santé & Pharma", logo: "Logo_PNG_SAIDAL.png" },
     { name: "Hikma", sector: "health", label: "Santé & Pharma", logo: "hikma.svg" },
-    { name: "Journal El Massa", sector: "media", label: "Médias", logo: "el-massa.svg" }
+    { name: "Journal El Massa", sector: "media", label: "Médias", logo: "El-massa.svg" }
   ];
   const SPEC_LABELS = {
     screen: "Écran",
@@ -313,7 +294,7 @@
       <button class="progress-track ${index === 0 ? "is-active" : ""}" type="button"
         data-slide="${index}" aria-label="Afficher ${slide.kicker}" aria-current="${index === 0}">
         <span class="progress-number">0${index + 1}</span>
-        <span class="progress-name">${slide.scene === "store" ? "DISTRIBUTEUR" : slide.scene === "repair" ? "GARANTIE" : "69 WILAYAS"}</span>
+        <span class="progress-name">${slide.progressLabel}</span>
         <span class="progress-fill"></span>
       </button>
     `).join("");
@@ -423,9 +404,8 @@
         <article class="phone-section ${reversed ? "is-reversed" : ""}" data-phone-section="${phone.id}">
           <div class="phone-stage" data-tilt>
             <div class="phone-ambient"></div>
-            <img class="phone-product-image" src="${phone.angles[0].url}" alt="${phone.model}" loading="lazy">
+            <img class="phone-product-image ${phone.imageScale || "scale-100"}" src="${phone.image}" alt="${phone.model}" loading="lazy">
             <button class="phone-image-trigger" type="button" data-open-phone="${index}" aria-label="Explorer ${phone.model}"></button>
-            <span class="image-placeholder-note">Visuel provisoire</span>
           </div>
           <div class="phone-copy">
             <p class="model-badge">${phone.badge}</p>
@@ -456,26 +436,11 @@
       <article class="partner-tile" data-sector="${partner.sector}">
         <div class="partner-logo-frame">
           <img class="partner-logo-image" src="assets/partners/${partner.logo}" alt="" aria-hidden="true" loading="lazy">
-          <span class="partner-logo-fallback">${partner.name}</span>
         </div>
+        <h3 class="partner-name">${partner.name}</h3>
         <p class="partner-sector-tag">${partner.label}</p>
       </article>
     `).join("");
-
-    $$(".partner-logo-image", grid).forEach(image => {
-      const fallback = image.nextElementSibling;
-      image.addEventListener("load", () => {
-        image.classList.add("is-loaded");
-        fallback.hidden = true;
-      }, { once: true });
-      image.addEventListener("error", () => {
-        image.hidden = true;
-      }, { once: true });
-      if (image.complete && image.naturalWidth > 0) {
-        image.classList.add("is-loaded");
-        fallback.hidden = true;
-      }
-    });
   }
 
   function initPartnerFilters() {
@@ -562,7 +527,8 @@
     `).join("");
     $("#detailWhatsApp").href = waLink(`Bonjour ${STORE.name}, je souhaite demander un devis pour le ${phone.model}.`, STORE.commercialWhatsapp);
     const image = $("#detailImage");
-    image.src = phone.angles[0].url;
+    image.className = `studio-image ${phone.imageScale || "scale-100"}`;
+    image.src = phone.image;
     image.alt = phone.model;
     $("#studioViewer").classList.remove("is-zoomed");
     setModalOpen($("#detailModal"), true);
@@ -616,8 +582,8 @@
   function renderPromo() {
     $("#promoPhones").innerHTML = PROMO_PHONES.map(phone => `
       <article class="promo-card">
-        <div class="promo-image-wrap"><img class="promo-image" src="${phone.angles[0].url}" alt="${phone.model}" loading="lazy"></div>
-        <p class="eyebrow">Visuel provisoire · ${phone.condition}</p>
+        <div class="promo-image-wrap"><img class="promo-image ${phone.imageScale || "scale-100"}" src="${phone.image}" alt="${phone.model}" loading="lazy"></div>
+        <p class="eyebrow">${phone.condition}</p>
         <h3>${phone.model}</h3>
         <p>${phone.specs.screen} · ${phone.specs.chip} · ${phone.specs.camera}</p>
         <p class="price">${phone.price}</p>
@@ -862,6 +828,7 @@
   // Startup.
   $("#navWhatsApp").href = waLink(`Bonjour ${STORE.name}, j'ai une question.`);
   $("#mobileWhatsApp").href = waLink(`Bonjour ${STORE.name}, j'ai une question.`);
+  $("#accessoriesWhatsApp").href = waLink(`Bonjour ${STORE.name}, je souhaite recevoir le catalogue accessoires.`, STORE.commercialWhatsapp);
   initStoreContact();
   renderHero();
   renderShowcase();

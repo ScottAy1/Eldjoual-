@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -28,21 +28,21 @@
             alt="Samsung">
         </div>
       </div>
-      <p id="tv-sub">EL DJOUAL DISTRIBUTION <span>• Algérie</span></p>
+      <p id="tv-sub" data-i18n-html="intro.sub">EL DJOUAL DISTRIBUTION <span>• Algérie</span></p>
     </div>
-    <span class="intro-caption">Samsung Galaxy • Algérie</span>
-    <button id="skipIntro" class="intro-skip" type="button">Passer l'intro</button>
+    <span class="intro-caption" data-i18n="intro.caption">Samsung Galaxy • Algérie</span>
+    <button id="skipIntro" class="intro-skip" type="button" data-i18n="intro.skip">Passer l'intro</button>
   </div>
 
-  <header class="site-header">
-    <nav class="nav-pill" aria-label="Navigation principale">
+  <header id="siteHeader" class="site-header">
+    <nav class="nav-pill" aria-label="Navigation principale" data-i18n-aria="nav.aria">
       <a class="brand-mark nav-brand-mark" href="#accueil" aria-label="EL DJOUAL DISTRIBUTION, accueil"><img class="nav-brand-logo" src="assets/logo/Logo.jpeg" alt="EL DJOUAL DISTRIBUTION"></a>
       <div class="nav-links">
-        <a href="#catalogue">Catalogue</a>
-        <a href="#accessoires">Accessoires</a>
-        <a href="#partenaires">Partenaires</a>
-        <button id="openPromo" type="button">Sélection Galaxy</button>
-        <a href="#contact">Contact</a>
+        <a href="#catalogue" data-i18n="nav.catalogue">Catalogue</a>
+        <a href="#accessoires" data-i18n="nav.accessories">Accessoires</a>
+        <a href="#partenaires" data-i18n="nav.partners">Partenaires</a>
+        <button id="openPromo" type="button" data-i18n="nav.selection">Sélection Galaxy</button>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav-actions">
         <div class="nav-socials" aria-label="Réseaux sociaux">
@@ -70,7 +70,13 @@
           </a>
         </div>
         <span class="nav-social-divider" aria-hidden="true"></span>
-        <a id="navWhatsApp" class="button button-whatsapp nav-cta" href="#" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>WhatsApp <span aria-hidden="true">↗</span></a>
+        <a id="navEmail" class="button button-email nav-cta" href="mailto:contact@eldjoual.com"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="nav.email">E-mail</span></a>
+        <a id="navWhatsApp" class="button button-whatsapp nav-cta" href="#" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg><span data-i18n="nav.whatsapp">WhatsApp</span> <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Choisir la langue" data-i18n-aria="nav.langAria">
+        <button class="lang-btn is-active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" type="button" data-lang="ar" aria-pressed="false" lang="ar">ع</button>
       </div>
       <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -78,11 +84,12 @@
     </nav>
     <div id="mobileMenu" class="mobile-menu" aria-label="Navigation mobile" aria-hidden="true" inert>
       <nav class="mobile-menu-links" aria-label="Liens du site">
-        <a href="#catalogue">Catalogue</a>
-        <a href="#accessoires">Accessoires</a>
-        <a href="#partenaires">Partenaires</a>
-        <button id="openPromoMobile" type="button">Sélection Galaxy</button>
-        <a href="#contact">Contact</a>
+        <a href="#catalogue" data-i18n="nav.catalogue">Catalogue</a>
+        <a href="#accessoires" data-i18n="nav.accessories">Accessoires</a>
+        <a href="#partenaires" data-i18n="nav.partners">Partenaires</a>
+        <a href="partenaire.html" data-i18n="nav.becomePartner">Devenir partenaire</a>
+        <button id="openPromoMobile" type="button" data-i18n="nav.selection">Sélection Galaxy</button>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="mobile-menu-socials" aria-label="Réseaux sociaux">
         <a href="https://www.instagram.com/distributeursamsung" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>Instagram ↗</a>
@@ -90,7 +97,10 @@
         <a href="https://www.tiktok.com/@distributeur.sams" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34a6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z"/></svg>TikTok ↗</a>
         <a href="https://www.linkedin.com/in/distributeur-samsung-algerie-3a11b1452" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn ↗</a>
       </div>
-      <a id="mobileWhatsApp" class="button button-whatsapp mobile-menu-cta" href="#" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>WhatsApp <span aria-hidden="true">↗</span></a>
+      <div class="mobile-menu-cta-group">
+        <a id="mobileWhatsApp" class="button button-whatsapp mobile-menu-cta" href="#" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg><span data-i18n="nav.whatsapp">WhatsApp</span> <span aria-hidden="true">↗</span></a>
+        <a id="mobileEmail" class="button button-email mobile-menu-cta" href="mailto:contact@eldjoual.com"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="nav.emailDirect">Envoyer un e-mail</span> <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </header>
 
@@ -101,7 +111,7 @@
       <div class="hero-ink-overlay" aria-hidden="true"></div>
       <div class="hero-transition-swipe" aria-hidden="true"></div>
       <div class="hero-copy max-w-6xl">
-        <span class="eyebrow hero-eyebrow">EL DJOUAL DISTRIBUTION // ALGÉRIE</span>
+        <span class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">EL DJOUAL DISTRIBUTION // ALGÉRIE</span>
         <p id="heroKicker" class="hero-kicker"></p>
         <h1 id="heroTitle" class="hero-title">EL DJOUAL DISTRIBUTION</h1>
         <div id="heroSubtitle" class="hero-subtitle hero-bio w-full max-w-5xl space-y-2.5 text-sm sm:text-base text-white/90 leading-relaxed bg-black/30 backdrop-blur-sm border-l-2 border-[#0381FE] p-4 sm:p-5 my-4">
@@ -109,7 +119,10 @@
           <p>Nous proposons une offre adaptée aux besoins du marché, un accompagnement commercial personnalisé.</p>
           <p>Forts de près de 20 ans d'expérience, nous poursuivons notre développement avec une ambition claire : renforcer notre présence sur le marché algérien et construire un réseau de distribution solide et durable, fondé sur la confiance, la proximité et la qualité de service.</p>
         </div>
-        <a href="#catalogue" class="button hero-cta">Entrer dans le catalogue <span aria-hidden="true">↓</span></a>
+        <div class="hero-cta-group">
+          <a href="#catalogue" class="button hero-cta"><span data-i18n="hero.cta">Entrer dans le catalogue</span> <span aria-hidden="true">↓</span></a>
+          <button id="openAbout" class="button hero-about-btn" type="button"><span data-i18n="hero.aboutBtn">À propos de nous</span> <span aria-hidden="true">↗</span></button>
+        </div>
         <div class="hero-load-status" aria-label="Chargement des nouveautés">
           <span class="hero-loading-wheel" aria-hidden="true"></span>
           <span id="heroLoadLabel">GALAXY ARRIVAGE</span>
@@ -118,18 +131,18 @@
         </div>
       </div>
       <aside class="hero-mission-card" aria-live="polite">
-        <span class="mission-card-label">OBJECTIF // ELDJOUAL</span>
+        <span class="mission-card-label" data-i18n="hero.missionLabel">OBJECTIF // ELDJOUAL</span>
         <p id="heroMission">OBJECTIF : TROUVER VOTRE GALAXY • COMMANDER SUR WHATSAPP ↗</p>
       </aside>
       <div class="hero-bottom">
         <div class="hero-checkpoints">
-          <span class="hero-checkpoint-caption">CHECKPOINTS</span>
+          <span class="hero-checkpoint-caption" data-i18n="hero.checkpoints">CHECKPOINTS</span>
           <span class="hero-index"><span id="heroCurrent">01</span> <i></i> 04</span>
         </div>
         <div id="heroProgress" class="hero-progress" role="group" aria-label="Choisir une présentation"></div>
         <div class="hero-controls">
-          <button id="heroPrev" type="button" aria-label="Présentation précédente">←</button>
-          <button id="heroNext" type="button" aria-label="Présentation suivante">→</button>
+          <button id="heroPrev" type="button" aria-label="Présentation précédente" data-i18n-aria="hero.prevAria">←</button>
+          <button id="heroNext" type="button" aria-label="Présentation suivante" data-i18n-aria="hero.nextAria">→</button>
         </div>
       </div>
     </section>
@@ -140,45 +153,45 @@
           <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="m3 7 4.5-2.5L12 7l-4.5 2.5L3 7Z"/><path d="M12 7l4.5-2.5L21 7l-4.5 2.5L12 7Z"/><path d="M3 7v5l4.5 2.5 4.5-2.5V7"/><path d="M12 7v5l4.5 2.5L21 12V7"/><path d="M7.5 14.5v5L12 22l4.5-2.5v-5"/>
           </svg>
-          <h3>Stock disponible</h3>
-          <p>Produits Samsung officiels en stock physique</p>
+          <h3 data-i18n="trust.stockTitle">Stock disponible</h3>
+          <p data-i18n="trust.stockDesc">Produits Samsung officiels en stock physique</p>
         </article>
         <article class="trust-item">
           <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="7.5" cy="16.5" r="3.5"/><path d="M11 16.5h8l2-3-2-3h-5l-2-3H9"/><path d="M7.5 16.5h.01M16 10.5v3h3"/><path d="M7.5 13V5"/>
           </svg>
-          <h3>Livraison 69 Wilayas</h3>
-          <p>Expédition rapide partout en Algérie</p>
+          <h3 data-i18n="trust.deliveryTitle">Livraison 69 Wilayas</h3>
+          <p data-i18n="trust.deliveryDesc">Expédition rapide partout en Algérie</p>
         </article>
         <article class="trust-item">
           <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3-.6L4 20l1.6-4.2a7.4 7.4 0 0 1-.6-3A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8.5 11.5h.01M12.5 11.5h.01M16.5 11.5h.01"/>
           </svg>
-          <h3>On vous répond !</h3>
-          <p>Joignez-nous au <a href="tel:+213552856155">0552 85 61 55</a></p>
+          <h3 data-i18n="trust.replyTitle">On vous répond !</h3>
+          <p data-i18n-html="trust.replyDesc">Joignez-nous au <a class="ltr-num" href="tel:+213552856155">0552 85 61 55</a></p>
         </article>
         <article class="trust-item">
           <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="m8 12 2.2 2.2a2 2 0 0 0 2.8 0l1-1"/><path d="m14 13 1.2 1.2a2 2 0 0 0 2.8 0l2-2a2 2 0 0 0 0-2.8l-3-3a2 2 0 0 0-2.8 0L13 7.6"/><path d="m10 11-1.2-1.2a2 2 0 0 0-2.8 0l-2 2a2 2 0 0 0 0 2.8l3 3a2 2 0 0 0 2.8 0L11 16.4"/><path d="m8 6 1-1a2 2 0 0 1 2.8 0l3 3"/>
           </svg>
-          <h3>Tarifs B2B compétitifs</h3>
-          <p>Prix négociés pour professionnels &amp; revendeurs</p>
+          <h3 data-i18n="trust.b2bTitle">Tarifs B2B compétitifs</h3>
+          <p data-i18n="trust.b2bDesc">Prix négociés pour professionnels &amp; revendeurs</p>
         </article>
         <article class="trust-item">
           <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>
           </svg>
-          <h3>Garantie 12 mois</h3>
-          <p>Garantie officielle &amp; service après-vente</p>
+          <h3 data-i18n="trust.warrantyTitle">Garantie 12 mois</h3>
+          <p data-i18n="trust.warrantyDesc">Garantie officielle &amp; service après-vente</p>
         </article>
       </div>
     </section>
 
     <section id="catalogue" class="catalogue-section">
       <div class="section-heading">
-        <p class="eyebrow">Sélection Eldjoual</p>
-        <h2>Un Galaxy pour chaque idée.</h2>
-        <p>Explorez les appareils, comparez les essentiels et trouvez celui qui vous ressemble.</p>
+        <p class="eyebrow" data-i18n="catalogue.eyebrow">Sélection Eldjoual</p>
+        <h2 data-i18n="catalogue.title">Un Galaxy pour chaque idée.</h2>
+        <p data-i18n="catalogue.desc">Explorez les appareils, comparez les essentiels et trouvez celui qui vous ressemble.</p>
       </div>
       <div id="phoneShowcase" class="phone-showcase"></div>
     </section>
@@ -186,36 +199,36 @@
     <section class="service-band service-details" aria-label="Services Eldjoual">
       <div class="service-grid">
         <article class="service-item">
-          <h3>Distribution nationale · 69 Wilayas</h3>
-          <p>Livraison rapide et fiable partout en Algérie, au service de nos clients dans les 69 wilayas.</p>
+          <h3 data-i18n="service.distTitle">Distribution nationale · 69 Wilayas</h3>
+          <p data-i18n="service.distDesc">Livraison rapide et fiable partout en Algérie, au service de nos clients dans les 69 wilayas.</p>
         </article>
         <article class="service-item">
-          <h3>Garantie officielle · 12 mois</h3>
-          <p>Vos appareils Samsung bénéficient d’une garantie officielle d’un an et d’un accompagnement dédié.</p>
+          <h3 data-i18n="service.warrantyTitle">Garantie officielle · 12 mois</h3>
+          <p data-i18n="service.warrantyDesc">Vos appareils Samsung bénéficient d’une garantie officielle d’un an et d’un accompagnement dédié.</p>
         </article>
         <article class="service-item">
-          <h3>Distributeur Samsung Algérie</h3>
-          <p>Un approvisionnement en produits Samsung authentiques, adapté aux besoins des professionnels et revendeurs.</p>
+          <h3 data-i18n="service.partnerTitle">Distributeur Samsung Algérie</h3>
+          <p data-i18n="service.partnerDesc">Un approvisionnement en produits Samsung authentiques, adapté aux besoins des professionnels et revendeurs.</p>
         </article>
       </div>
       <article class="service-sav" aria-labelledby="serviceSavTitle">
-        <h3 id="serviceSavTitle">Service Après-Vente (SAV) Samsung</h3>
-        <p>Les matériels Samsung sont garantis un an pièces et main-d'œuvre, à l'exclusion des dommages décrits dans nos Conditions Générales de Vente.</p>
-        <p>Le matériel est à retourner directement au centre de réparation suivant :<br>
+        <h3 id="serviceSavTitle" data-i18n="sav.title">Service Après-Vente (SAV) Samsung</h3>
+        <p data-i18n="sav.p1">Les matériels Samsung sont garantis un an pièces et main-d'œuvre, à l'exclusion des dommages décrits dans nos Conditions Générales de Vente.</p>
+        <p data-i18n-html="sav.p2">Le matériel est à retourner directement au centre de réparation suivant :<br>
           <strong>MYME TELECOMMUNICATION</strong><br>
           Av. des Frères Abdeslami, Kouba<br>
-          Tél. : 0780 10 01 00<br>
+          Tél. : <span class="ltr-num">0780 10 01 00</span><br>
           Site : <a href="https://mymetelecom.com" target="_blank" rel="noopener noreferrer">mymetelecom.com</a>
         </p>
-        <p>Le matériel doit être retourné avec sa boîte, accompagné d'un courrier mentionnant vos coordonnées et une description de la panne.</p>
+        <p data-i18n="sav.p3">Le matériel doit être retourné avec sa boîte, accompagné d'un courrier mentionnant vos coordonnées et une description de la panne.</p>
       </article>
     </section>
 
     <section id="accessoires" class="accessories-section" aria-labelledby="accessoriesTitle">
       <header class="accessories-heading">
-        <p class="eyebrow">ACCESSOIRES &amp; ÉQUIPEMENTS</p>
-        <h2 id="accessoriesTitle">Complétez votre expérience Galaxy.</h2>
-        <p>Les essentiels Samsung pour équiper vos équipes et accompagner chaque appareil.</p>
+        <p class="eyebrow" data-i18n="accessories.eyebrow">ACCESSOIRES &amp; ÉQUIPEMENTS</p>
+        <h2 id="accessoriesTitle" data-i18n="accessories.title">Complétez votre expérience Galaxy.</h2>
+        <p data-i18n="accessories.desc">Les essentiels Samsung pour équiper vos équipes et accompagner chaque appareil.</p>
       </header>
       <div class="accessories-grid">
         <article class="accessory-card">
@@ -227,8 +240,8 @@
             <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
             <path d="M5 13h2v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2ZM17 13h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2z"/>
           </svg>
-          <h3>Écouteurs &amp; Audio</h3>
-          <p>Écouteurs filaires, Bluetooth &amp; Galaxy Buds</p>
+          <h3 data-i18n="accessories.c1Title">Écouteurs &amp; Audio</h3>
+          <p data-i18n="accessories.c1Desc">Écouteurs filaires, Bluetooth &amp; Galaxy Buds</p>
         </article>
         <article class="accessory-card">
           <span class="accessory-number">02</span>
@@ -239,8 +252,8 @@
             <rect x="5" y="4" width="14" height="18" rx="1"/>
             <path d="M10 2h4M12 8l-3 5h4l-1 4"/>
           </svg>
-          <h3>Power Banks</h3>
-          <p>Batteries externes haute capacité &amp; charge rapide</p>
+          <h3 data-i18n="accessories.c2Title">Power Banks</h3>
+          <p data-i18n="accessories.c2Desc">Batteries externes haute capacité &amp; charge rapide</p>
         </article>
         <article class="accessory-card">
           <span class="accessory-number">03</span>
@@ -251,8 +264,8 @@
             <path d="M7 3v5M11 3v5M6 8h6v3a3 3 0 0 1-3 3v7"/>
             <path d="M16 5h4v6h-4zM18 11v4"/>
           </svg>
-          <h3>Chargeurs &amp; Câbles</h3>
-          <p>Adaptateurs secteur 25W/45W Super Fast Charging &amp; câbles USB-C</p>
+          <h3 data-i18n="accessories.c3Title">Chargeurs &amp; Câbles</h3>
+          <p data-i18n="accessories.c3Desc">Adaptateurs secteur 25W/45W Super Fast Charging &amp; câbles USB-C</p>
         </article>
         <article class="accessory-card">
           <span class="accessory-number">04</span>
@@ -262,8 +275,8 @@
           <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 5h4M11 18.5h2"/>
           </svg>
-          <h3>Coques de protection</h3>
-          <p>Coques résistantes et élégantes pour protéger vos appareils Galaxy</p>
+          <h3 data-i18n="accessories.c4Title">Coques de protection</h3>
+          <p data-i18n="accessories.c4Desc">Coques résistantes et élégantes pour protéger vos appareils Galaxy</p>
         </article>
         <article class="accessory-card">
           <span class="accessory-number">05</span>
@@ -273,42 +286,88 @@
           <svg class="accessory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 5h6M10 19h4M12 9v5M9.5 11.5h5"/>
           </svg>
-          <h3>Protections d’écran</h3>
-          <p>Films et verres trempés pour préserver l’écran de vos smartphones</p>
+          <h3 data-i18n="accessories.c5Title">Protections d’écran</h3>
+          <p data-i18n="accessories.c5Desc">Films et verres trempés pour préserver l’écran de vos smartphones</p>
         </article>
       </div>
       <div class="accessories-cta-wrap">
         <a id="accessoriesWhatsApp" class="button button-whatsapp accessories-cta" href="#" target="_blank" rel="noopener noreferrer">
-          Demander le catalogue accessoires <span aria-hidden="true">↗</span>
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+          <span data-i18n="accessories.cta">Demander le catalogue accessoires</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a id="accessoriesEmail" class="button button-email accessories-cta" href="mailto:commercial@eldjoual.com">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span data-i18n="accessories.ctaEmail">Demander par e-mail</span> <span aria-hidden="true">↗</span>
         </a>
       </div>
     </section>
 
     <section id="partenaires" class="partners-section" aria-labelledby="partnersTitle">
       <header class="partners-heading">
-        <p class="eyebrow">ILS NOUS FONT CONFIANCE</p>
-        <h2 id="partnersTitle">Nos partenaires par secteur.</h2>
-        <p>EL DJOUAL DISTRIBUTION accompagne les entreprises et les organisations dans leurs besoins en équipements Samsung à travers l’Algérie.</p>
+        <p class="eyebrow" data-i18n="partners.eyebrow">ILS NOUS FONT CONFIANCE</p>
+        <h2 id="partnersTitle" data-i18n="partners.title">Nos partenaires par secteur.</h2>
+        <p data-i18n="partners.desc">EL DJOUAL DISTRIBUTION accompagne les entreprises et les organisations dans leurs besoins en équipements Samsung à travers l’Algérie.</p>
       </header>
       <div id="partnerFilters" class="partner-filters" role="group" aria-label="Filtrer les partenaires par secteur">
-        <button class="partner-filter is-active" type="button" data-sector="all" aria-pressed="true">Tous</button>
-        <button class="partner-filter" type="button" data-sector="energy" aria-pressed="false">Énergie &amp; Hydrocarbures</button>
-        <button class="partner-filter" type="button" data-sector="telecom" aria-pressed="false">Télécoms &amp; Tech</button>
-        <button class="partner-filter" type="button" data-sector="industry" aria-pressed="false">Industrie &amp; Agro</button>
-        <button class="partner-filter" type="button" data-sector="health" aria-pressed="false">Santé &amp; Pharma</button>
-        <button class="partner-filter" type="button" data-sector="media" aria-pressed="false">Médias</button>
+        <button class="partner-filter is-active" type="button" data-sector="all" aria-pressed="true" data-i18n="partners.fAll">Tous</button>
+        <button class="partner-filter" type="button" data-sector="energy" aria-pressed="false" data-i18n="partners.fEnergy">Énergie &amp; Hydrocarbures</button>
+        <button class="partner-filter" type="button" data-sector="telecom" aria-pressed="false" data-i18n="partners.fTelecom">Télécoms &amp; Tech</button>
+        <button class="partner-filter" type="button" data-sector="industry" aria-pressed="false" data-i18n="partners.fIndustry">Industrie &amp; Agro</button>
+        <button class="partner-filter" type="button" data-sector="health" aria-pressed="false" data-i18n="partners.fHealth">Santé &amp; Pharma</button>
+        <button class="partner-filter" type="button" data-sector="media" aria-pressed="false" data-i18n="partners.fMedia">Médias</button>
       </div>
       <div id="partnerGrid" class="partner-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="devenir-partenaire" class="become-partner-section" aria-labelledby="becomePartnerTitle">
+      <div class="become-partner-shell">
+        <div class="become-partner-copy">
+          <p class="eyebrow become-partner-eyebrow" data-i18n="becomePartner.eyebrow">PROGRAMME PARTENAIRE B2B · 69 WILAYAS</p>
+          <h2 id="becomePartnerTitle" data-i18n="becomePartner.title">Devenez partenaire officiel EL DJOUAL DISTRIBUTION.</h2>
+          <p class="become-partner-lead" data-i18n="becomePartner.desc">Rejoignez notre réseau de distribution Samsung en Algérie. Que vous soyez revendeur, distributeur régional ou entreprise à la recherche d’un fournisseur fiable depuis 2006, notre équipe commerciale vous accompagne durablement.</p>
+          <div class="become-partner-actions">
+            <a href="partenaire.html" class="button become-partner-cta">
+              <span data-i18n="becomePartner.ctaPrimary">Remplir le formulaire partenaire</span> <span aria-hidden="true">↗</span>
+            </a>
+            <a id="becomePartnerEmail" href="mailto:commercial@eldjoual.com" class="button become-partner-secondary">
+              <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span data-i18n="becomePartner.ctaEmail">Écrire au service commercial</span>
+            </a>
+          </div>
+        </div>
+        <div class="become-partner-pillars">
+          <article class="partner-pillar">
+            <span class="partner-pillar-num">01</span>
+            <h3 data-i18n="becomePartner.p1Title">Stock officiel &amp; continuité</h3>
+            <p data-i18n="becomePartner.p1Desc">Accès direct aux gammes Samsung Galaxy authentiques et accessoires certifiés avec garantie officielle 12 mois.</p>
+          </article>
+          <article class="partner-pillar">
+            <span class="partner-pillar-num">02</span>
+            <h3 data-i18n="becomePartner.p2Title">Conditions commerciales B2B</h3>
+            <p data-i18n="becomePartner.p2Desc">Tarifs professionnels compétitifs, remises volume et devis rapides adaptés aux revendeurs et flottes d’entreprises.</p>
+          </article>
+          <article class="partner-pillar">
+            <span class="partner-pillar-num">03</span>
+            <h3 data-i18n="becomePartner.p3Title">Logistique nationale 69 Wilayas</h3>
+            <p data-i18n="becomePartner.p3Desc">Approvisionnement sécurisé et expéditions rapides sur tout le territoire algérien, suivis par un interlocuteur dédié.</p>
+          </article>
+          <article class="partner-pillar">
+            <span class="partner-pillar-num">04</span>
+            <h3 data-i18n="becomePartner.p4Title">Près de 20 ans d’expertise</h3>
+            <p data-i18n="becomePartner.p4Desc">Un partenaire établi depuis 2006 avec accompagnement commercial personnalisé et prise en charge SAV officielle.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contactTitle">
       <div class="contact-heading">
         <div>
-          <p class="eyebrow">EL DJOUAL DISTRIBUTION · ALGÉRIE</p>
-          <h2 id="contactTitle">Un contact direct. Un réseau national.</h2>
+          <p class="eyebrow" data-i18n="contact.eyebrow">EL DJOUAL DISTRIBUTION · ALGÉRIE</p>
+          <h2 id="contactTitle" data-i18n="contact.title">Un contact direct. Un réseau national.</h2>
         </div>
         <span id="storeStatus" class="store-status" role="status" aria-live="polite">
-          <i aria-hidden="true"></i><span>Livraison nationale · 69 wilayas</span>
+          <i aria-hidden="true"></i><span data-i18n="contact.status">Livraison nationale · 69 wilayas</span>
         </span>
       </div>
 
@@ -316,32 +375,38 @@
         <div class="contact-layout">
           <div class="contact-info">
             <article class="contact-card">
-              <p class="contact-card-label">Distribution nationale</p>
-              <address>Algérie<br>Livraison dans les 69 wilayas</address>
+              <p class="contact-card-label" data-i18n="contact.distLabel">Distribution nationale</p>
+              <address data-i18n-html="contact.address">Algérie<br>Livraison dans les 69 wilayas</address>
               <a id="storeDirections" class="contact-text-link" href="https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac" target="_blank" rel="noopener noreferrer">
-                Ouvrir l’itinéraire GPS <span aria-hidden="true">↗</span>
+                <span data-i18n="contact.gps">Ouvrir l’itinéraire GPS</span> <span aria-hidden="true">↗</span>
               </a>
             </article>
 
             <article class="contact-card">
-              <p class="contact-card-label">Contact général</p>
+              <p class="contact-card-label" data-i18n="contact.generalLabel">Contact général</p>
               <div class="contact-phone-row">
-                <a class="contact-phone" href="tel:+213563516895">0563 51 68 95</a>
-                <button id="copyPhone" class="copy-phone" type="button" aria-live="polite">Copier</button>
+                <a class="contact-phone ltr-num" href="tel:+213563516895">0563 51 68 95</a>
+                <button id="copyPhone" class="copy-phone" type="button" aria-live="polite" data-i18n="contact.copy">Copier</button>
               </div>
-              <a class="contact-email" href="mailto:contact@eldjoual.com">contact@eldjoual.com</a>
+              <a class="contact-email ltr-num" href="mailto:contact@eldjoual.com">contact@eldjoual.com</a>
             </article>
 
             <article class="contact-card">
-              <p class="contact-card-label">Service commercial</p>
-              <a class="contact-phone" href="tel:+213552856155">0552 85 61 55</a>
-              <a class="contact-email" href="mailto:commercial@eldjoual.com">commercial@eldjoual.com</a>
+              <p class="contact-card-label" data-i18n="contact.salesLabel">Service commercial</p>
+              <a class="contact-phone ltr-num" href="tel:+213552856155">0552 85 61 55</a>
+              <a class="contact-email ltr-num" href="mailto:commercial@eldjoual.com">commercial@eldjoual.com</a>
             </article>
 
-            <a id="contactWhatsapp" class="button contact-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
-              <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-              Discuter sur WhatsApp maintenant <span aria-hidden="true">↗</span>
-            </a>
+            <div class="contact-cta-stack">
+              <a id="contactWhatsapp" class="button contact-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+                <span data-i18n="contact.whatsapp">Discuter sur WhatsApp maintenant</span> <span aria-hidden="true">↗</span>
+              </a>
+              <a id="contactEmailBtn" class="button button-email contact-email-btn" href="mailto:contact@eldjoual.com">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span data-i18n="contact.emailBtn">Envoyer un e-mail directement</span> <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
 
           <div class="contact-map">
@@ -357,11 +422,11 @@
               <div class="map-overlay-heading">
                 <div>
                   <p class="map-store-name">EL DJOUAL DISTRIBUTION</p>
-                  <p class="map-store-address">Distributeur Samsung · Algérie</p>
+                  <p class="map-store-address" data-i18n="contact.mapSubtitle">Distributeur Samsung · Algérie</p>
                 </div>
               </div>
               <a id="mapDirections" class="map-directions" href="https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac" target="_blank" rel="noopener noreferrer">
-                Y aller avec Google Maps <span aria-hidden="true">↗</span>
+                <span data-i18n="contact.mapBtn">Y aller avec Google Maps</span> <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
@@ -373,7 +438,7 @@
   <!-- Product detail modal with a single product image and specifications. -->
   <div id="detailModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-hidden="true">
     <div class="studio-panel" data-lenis-prevent>
-      <button id="closeDetail" class="modal-close" type="button" aria-label="Fermer les détails">×</button>
+      <button id="closeDetail" class="modal-close" type="button" aria-label="Fermer les détails" data-i18n-aria="modal.closeDetail">×</button>
       <div class="studio-gallery">
         <div id="studioViewer" class="studio-viewer">
           <div class="studio-glow"></div>
@@ -387,7 +452,10 @@
         <dl id="detailSpecs" class="spec-table"></dl>
         <div class="studio-order">
           <p id="detailPrice" class="price"></p>
-          <a id="detailWhatsApp" class="button button-whatsapp" href="#" target="_blank" rel="noopener"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>Demander un devis / Commander sur WhatsApp <span aria-hidden="true">↗</span></a>
+          <div class="studio-order-actions">
+            <a id="detailWhatsApp" class="button button-whatsapp" href="#" target="_blank" rel="noopener"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg><span data-i18n="modal.orderWhatsapp">Demander un devis / Commander sur WhatsApp</span> <span aria-hidden="true">↗</span></a>
+            <a id="detailEmail" class="button button-email" href="mailto:commercial@eldjoual.com"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="modal.orderEmail">Demander par e-mail</span> <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -396,10 +464,90 @@
   <!-- Samsung spotlight, opened from navigation or after the intro. -->
   <div id="promoModal" class="modal-layer promo-layer" role="dialog" aria-modal="true" aria-labelledby="promoTitle" aria-hidden="true">
     <div class="promo-panel" data-lenis-prevent>
-      <button id="closePromo" class="modal-close" type="button" aria-label="Fermer la sélection">×</button>
-      <p class="eyebrow">À la une chez Eldjoual</p>
-      <h2 id="promoTitle" class="promo-title">La sélection Galaxy.</h2>
+      <button id="closePromo" class="modal-close" type="button" aria-label="Fermer la sélection" data-i18n-aria="modal.closePromo">×</button>
+      <p class="eyebrow" data-i18n="promo.eyebrow">À la une chez Eldjoual</p>
+      <h2 id="promoTitle" class="promo-title" data-i18n="promo.title">La sélection Galaxy.</h2>
       <div id="promoPhones" class="promo-grid"></div>
+    </div>
+  </div>
+
+  <!-- About Us modal opened from the hero section. -->
+  <div id="aboutModal" class="modal-layer about-layer" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle" aria-hidden="true">
+    <div class="about-panel" data-lenis-prevent>
+      <button id="closeAbout" class="modal-close" type="button" aria-label="Fermer À propos de nous" data-i18n-aria="aboutModal.close">×</button>
+      <p class="eyebrow" data-i18n="aboutModal.eyebrow">À PROPOS DE NOUS · DEPUIS 2006</p>
+      <h2 id="aboutModalTitle" class="about-modal-title" data-i18n="aboutModal.title">EL DJOUAL DISTRIBUTION.</h2>
+      <p class="about-modal-lead" data-i18n="aboutModal.lead">Distributeur spécialisé en téléphonie mobile Samsung en Algérie depuis près de 20 ans.</p>
+      <div class="about-stats-grid">
+        <div class="about-stat">
+          <strong class="ltr-num">2006</strong>
+          <span data-i18n="aboutModal.stat1">Près de 20 ans d’expérience</span>
+        </div>
+        <div class="about-stat">
+          <strong class="ltr-num">69</strong>
+          <span data-i18n="aboutModal.stat2">Wilayas desservies</span>
+        </div>
+        <div class="about-stat">
+          <strong data-i18n="aboutModal.stat3Val">12 mois</strong>
+          <span data-i18n="aboutModal.stat3">Garantie officielle &amp; SAV</span>
+        </div>
+      </div>
+      <div class="about-modal-body">
+        <p data-i18n="aboutModal.p1">EL DJOUAL DISTRIBUTION est une entreprise spécialisée dans la distribution de produits de téléphonie mobile de la marque Samsung en Algérie. Depuis 2006, nous mettons notre expérience et notre connaissance du marché au service des professionnels, des entreprises et de nos partenaires commerciaux.</p>
+        <p data-i18n="aboutModal.p2">Nous proposons une offre adaptée aux besoins du marché, un accompagnement commercial personnalisé et un approvisionnement fiable en appareils Galaxy authentiques et accessoires officiels.</p>
+        <p data-i18n="aboutModal.p3">Forts de près de 20 ans d'expérience, nous poursuivons notre développement avec une ambition claire : renforcer notre présence sur le marché algérien et construire un réseau de distribution solide et durable, fondé sur la confiance, la proximité et la qualité de service.</p>
+      </div>
+      <div class="about-values-row">
+        <span class="about-value-pill" data-i18n="aboutModal.v1">Confiance</span>
+        <span class="about-value-pill" data-i18n="aboutModal.v2">Proximité</span>
+        <span class="about-value-pill" data-i18n="aboutModal.v3">Qualité de service</span>
+      </div>
+      <div class="about-modal-actions">
+        <a href="partenaire.html" class="button button-whatsapp">
+          <span data-i18n="aboutModal.ctaPartner">Devenir partenaire</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a id="aboutEmailBtn" href="mailto:contact@eldjoual.com" class="button button-email">
+          <span data-i18n="aboutModal.ctaEmail">Nous écrire par e-mail</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a id="aboutCatalogueBtn" href="#catalogue" class="button button-outline">
+          <span data-i18n="aboutModal.ctaCatalogue">Voir le catalogue</span> <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick email compose modal so Email buttons work reliably even without a desktop mail client. -->
+  <div id="emailModal" class="modal-layer email-layer" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle" aria-hidden="true">
+    <div class="email-panel" data-lenis-prevent>
+      <button id="closeEmailModal" class="modal-close" type="button" aria-label="Fermer la fenêtre e-mail" data-i18n-aria="emailModal.close">×</button>
+      <p class="eyebrow" data-i18n="emailModal.eyebrow">CONTACT DIRECT PAR E-MAIL</p>
+      <h2 id="emailModalTitle" class="email-modal-title" data-i18n="emailModal.title">Envoyer un e-mail.</h2>
+      <div class="email-recipient-row">
+        <span class="email-recipient-label" data-i18n="emailModal.toLabel">Destinataire :</span>
+        <strong id="emailModalTo" class="ltr-num">contact@eldjoual.com</strong>
+        <button id="copyEmailAddress" class="copy-phone" type="button" data-i18n="contact.copy">Copier</button>
+      </div>
+      <div class="email-modal-fields">
+        <div class="form-field">
+          <label for="emailModalSubject" data-i18n="emailModal.subjectLabel">Objet</label>
+          <input id="emailModalSubject" type="text">
+        </div>
+        <div class="form-field">
+          <label for="emailModalBody" data-i18n="emailModal.bodyLabel">Message</label>
+          <textarea id="emailModalBody" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="email-modal-actions">
+        <a id="emailOpenGmail" class="button button-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="emailModal.openGmail">Envoyer via Gmail</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a id="emailOpenOutlook" class="button button-email" href="#" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="emailModal.openOutlook">Envoyer via Outlook</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a id="emailOpenDefault" class="button button-outline" href="#">
+          <span data-i18n="emailModal.openDefault">App E-mail (mailto)</span> <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -407,18 +555,20 @@
     <div class="footer-top">
       <div>
         <a class="brand-mark footer-brand" href="#accueil">EL DJOUAL<span>.</span><small>DISTRIBUTION</small></a>
-        <p class="footer-tagline">Distributeur Samsung en Algérie · Garantie 12 mois · Livraison 69 Wilayas.</p>
-        <p class="logo-attribution">
+        <p class="footer-tagline" data-i18n="footer.tagline">Distributeur Samsung en Algérie · Garantie 12 mois · Livraison 69 Wilayas.</p>
+        <p class="logo-attribution" data-i18n-html="footer.attribution">
           Logo Samsung : <a href="https://commons.wikimedia.org/wiki/File:Samsung_Orig_Wordmark_BLACK_RGB.png" target="_blank" rel="noopener noreferrer">Samsung, via Wikimedia Commons</a> ·
           <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> (couleurs adaptées).
         </p>
       </div>
       <div class="footer-contact">
-        <p class="eyebrow">Explorer</p>
-        <a href="#catalogue">Catalogue</a>
+        <p class="eyebrow" data-i18n="footer.explore">Explorer</p>
+        <a href="#catalogue" data-i18n="nav.catalogue">Catalogue</a>
+        <a href="partenaire.html" data-i18n="nav.becomePartner">Devenir partenaire</a>
         <a id="footerMaps" href="https://maps.app.goo.gl/nc4N5kCj3Bnv2JJ2A?g_st=ac" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>
-        <a href="#" id="footerWhatsapp" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>WhatsApp ↗</a>
-        <p class="eyebrow footer-social-heading">Suivez-nous</p>
+        <a href="#" id="footerWhatsapp" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg><span data-i18n="nav.whatsapp">WhatsApp</span> ↗</a>
+        <a href="mailto:contact@eldjoual.com" id="footerEmail"><svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="nav.email">E-mail</span> ↗</a>
+        <p class="eyebrow footer-social-heading" data-i18n="footer.follow">Suivez-nous</p>
         <div class="footer-socials" aria-label="Réseaux sociaux Eldjoual">
           <a class="footer-social-link footer-social-instagram" href="https://www.instagram.com/distributeursamsung" target="_blank" rel="noopener noreferrer" aria-label="Instagram EL DJOUAL DISTRIBUTION">
             <svg class="footer-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -443,7 +593,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 EL DJOUAL DISTRIBUTION</span>
-      <button id="replayIntro" type="button">Revoir l'intro <span aria-hidden="true">↗</span></button>
+      <button id="replayIntro" type="button"><span data-i18n="footer.replay">Revoir l'intro</span> <span aria-hidden="true">↗</span></button>
     </div>
   </footer>
 
